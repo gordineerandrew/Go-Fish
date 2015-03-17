@@ -5,11 +5,11 @@ readable string form of a card.
 public class Card{
 
     public enum Suit{
-        HEART, DIAMOND, SPADE, CLUB
+        HEART,DIAMOND,SPADE,CLUB
     }
 
     public enum Value{
-        A,2,3,4,5,6,7,8,9,10,J,Q,K
+        ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING
     }
 
     private Value value;
@@ -48,31 +48,31 @@ public class Card{
     //Returns the string version of the value of the card.
     private static String valueToString(Value value){
         switch (value){
-            case A:
+            case ACE:
                 return "A";
-            case 2:
+            case TWO:
                 return "2";
-            case 3:
+            case THREE:
                 return "3";
-            case 4:
+            case FOUR:
                 return "4";
-            case 5:
+            case FIVE:
                 return "5";
-            case 6:
+            case SIX:
                 return "6";
-            case 7:
+            case SEVEN:
                 return "7";
-            case 8:
+            case EIGHT:
                 return "8";
-            case 9:
+            case NINE:
                 return "9";
-            case 10:
+            case TEN:
                 return "10";
-            case J:
+            case JACK:
                 return "j";
-            case Q:
+            case QUEEN:
                 return "Q";
-            case K:
+            case KING:
                 return "K";
             default:
                 return "Error";
