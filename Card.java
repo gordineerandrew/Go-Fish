@@ -1,3 +1,4 @@
+
 /*
 This class specifies the value and suit of a card. It also defines the human
 readable string form of a card.
@@ -5,11 +6,12 @@ readable string form of a card.
 public class Card{
 
     public enum Suit{
-        HEART,DIAMOND,SPADE,CLUB
+        HEART,DIAMOND,SPADE,CLUB,NOTASUIT
     }
 
     public enum Value{
-        ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING
+        ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING,
+        NOTAVALUE
     }
 
     private Value value;
@@ -31,7 +33,7 @@ public class Card{
 
     //Switches the suit enum to the unicode value for that enum and returns it.
     private static String suitToString(Suit suit){
-        switch (this.suit){
+        switch (suit){
             case HEART:
                 return "\u2665";
             case DIAMOND:
