@@ -1,57 +1,70 @@
 # Go-Fish
-Probability Project
+A Project for M362K that will explore the use of conditional probability to play a better game of Go-Fish.
 
-Things Needed:
-    Player Class
-        Human
-        AI
-        Hands for each player
-            collection of cards (Start with 7)
-        collection of books for each player
-        Actions
-            Select Player
-            select card
-            go fish
+# Objects
 
+* GameDriver - the class that will drive the game loop and manage global assets
+* Player - an abstract base player class that will define 'global' player behavior
+    * Human Player - defines player behavior specific to human players
+    * AI Player - defines player behavior specific to AI players
+* Deck - defines behavior and state associated with the running game's deck of cards
+* Card - defines the state of a card
+* Book - defines the state of a book of cards
 
-Game Driver
-    shuffle deck at start
-    give cards to all players (7 each)
-    any books the players have auto selected
-    selects player turn (based on dice roll, showing results)
-    game loop
-        specify current players turn
-        player choose card and player to search from
-        if selected correctly then book created
-            otherwise go fish
-            if no cards in center, nothing happens
-        end turn
-    delay during AI turns
-    on human turn display extra information
+# SPECIFICATIONS
 
+## GameDriver
+* shuffle deck at start of game (shuffle 7 times for true shuffle)
+* deal 7 cards to each player
+* auto collect any books.
+* select player to take the first turn at random
+### Game Loop
+* specify the current players turn
+* choose card to look for
+* choose player to look for card from
+* confirm that match is appropriate
+* if not redo
+* if selected correctly then book is created
+    * gets to go another turn
+* else go fish
+    * draw card from deck if there are any
+    * END TURN
 
-Deck of cards
-    52 card objects
-    deck random
-    arraylist to store card objects in the deck
-    separate array to store counts of each card
-    use the list.shuffle to shuffle deck 7 times
-    position index to go through deck
+### MISC GAME LOOP INFO
+* during player turns go through each of these steps waiting for inputs
+* during AI turns, have minor delay so that player isn't overrun with information
 
 
-Card object
-    suit
-    value of card
+## Player
+### State
+* each player has a hand...
+    * hand is just a collection of cards
+* ...a set of books...
+    * a collection of pairs of cards
+* ... and a score..
+    * score specified by the number of books the player has
+### Behavior
+* Draw from the deck / Go-Fish
+* request cards from other players
 
-Book Object
-    2 cards for a book
-    Suit does not matter
+## Card
+### State
+* Suit
+* Value
+### Behavior
+* toString - to get a human-readable form of the card object
 
+## Book
+### State
+* value of the book
 
-UI
-    Score - for each player
-    Players
-    current hand - human player
-    Optional - view other player hands throughout match
-    Probabilities of each card for each player (except human) when
-            card is selected.
+## Deck
+### State
+* begins with 52 card objects
+* an array of 13 values to keep track of how many of each value is left in the deck
+* keep a reference of the index within the deck
+    * don't bother removing things since nothing can be added back to the deck
+
+### Behavior
+* use list.shuffle to shuffle the deck
+* grab from the top of the deck when Go-Fish or any kind of draw
