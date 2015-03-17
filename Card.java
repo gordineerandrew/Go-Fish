@@ -12,8 +12,8 @@ public class Card{
         A,2,3,4,5,6,7,8,9,10,J,Q,K
     }
 
-    Value value;
-    Suit suit;
+    private Value value;
+    private Suit suit;
 
     public Card(Suit suit, Value value){
         this.value = value;
@@ -30,7 +30,7 @@ public class Card{
     }
 
     //Switches the suit enum to the unicode value for that enum and returns it.
-    public static String suitToString(Suit suit){
+    private static String suitToString(Suit suit){
         switch (this.suit){
             case HEART:
                 return "\u2665";
@@ -46,7 +46,7 @@ public class Card{
     }
 
     //Returns the string version of the value of the card.
-    public static String valueToString(Value value){
+    private static String valueToString(Value value){
         switch (value){
             case A:
                 return "A";
