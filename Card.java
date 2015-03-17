@@ -22,6 +22,15 @@ public class Card{
         this.suit = suit;
     }
 
+    /* getters for the card state */
+    public Value getValue(){
+        return this.value;
+    }
+
+    public Suit getSuit(){
+        return this.suit;
+    }
+
     //Overrides the toString method to create a human readable version.
     public String toString(){
         StringBuilder s = new StringBuilder("[");
