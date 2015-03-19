@@ -3,7 +3,7 @@
 DONE * shuffle deck at start of game (shuffle 7 times for true shuffle)
 DONE * deal 7 cards to each player
 DONE * auto collect any books.
-* select player to take the first turn at random
+DONE * select player to take the first turn at random
 ### Game Loop
 * specify the current players turn
 * choose card to look for
