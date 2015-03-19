@@ -31,3 +31,4 @@ GoFish: GoFish.class
 
 clean:
 	rm *.class
+
