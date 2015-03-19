@@ -62,6 +62,8 @@ public abstract class Player{
             this.hand.remove(playerCard);
             /* add book to this player's set of books */
             books[requestedCard.getValue().ordinal()]++;
+            /* update the score */
+            score++;
             /* return that the requested card was found */
             return true;
         }
