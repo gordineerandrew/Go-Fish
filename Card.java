@@ -41,7 +41,7 @@ public class Card{
     }
 
     //Switches the suit enum to the unicode value for that enum and returns it.
-    private static String suitToString(Suit suit){
+    public static String suitToString(Suit suit){
         switch (suit){
             case HEART:
                 return "\u2665";
@@ -56,8 +56,42 @@ public class Card{
         }
     }
 
+    // maps ints to enum values
+    public static Card.Value intToValue(int value){
+        switch(value){
+            case 1:
+                return Card.Value.ACE;
+            case 2:
+                return Card.Value.TWO;
+            case 3:
+                return Card.Value.THREE;
+            case 4:
+                return Card.Value.FOUR;
+            case 5:
+                return Card.Value.FIVE;
+            case 6:
+                return Card.Value.SIX;
+            case 7:
+                return Card.Value.SEVEN;
+            case 8:
+                return Card.Value.EIGHT;
+            case 9:
+                return Card.Value.NINE;
+            case 10:
+                return Card.Value.TEN;
+            case 11:
+                return Card.Value.JACK;
+            case 12:
+                return Card.Value.QUEEN;
+            case 13:
+                return Card.Value.KING;
+            default:
+                return Card.Value.NOTAVALUE;
+        }
+    }
+
     //Returns the string version of the value of the card.
-    private static String valueToString(Value value){
+    public static String valueToString(Value value){
         switch (value){
             case ACE:
                 return "A";
