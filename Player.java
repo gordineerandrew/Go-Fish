@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.ListIterator;
 
 public abstract class Player{
@@ -7,7 +7,7 @@ public abstract class Player{
     /* state of the player */
     protected String name;
     protected Deck deckRef;
-    protected LinkedList<Card> hand;
+    protected ArrayList<Card> hand;
     protected int score;
     protected int[] books = new int[MAX_TOTAL_BOOKS];
 
@@ -16,7 +16,7 @@ public abstract class Player{
     protected Player(String name, Deck deckRef){
         this.name = name;
         this.deckRef = deckRef;
-        this.hand = new LinkedList<Card>();
+        this.hand = new ArrayList<Card>();
         this.score = 0;
 
     }
