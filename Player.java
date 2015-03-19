@@ -21,10 +21,31 @@ public abstract class Player{
 
     }
 
-    public void drawCard(){
+    public Card drawCard(){
         Card newCard = deckRef.draw();
-        if(newCard != null)
-            hand.add(newCard);
+        /* if there are cards left in the deck... */
+        if(newCard != null){
+            /* get the value of the new card */
+            Card.Value newValue = newCard.getValue();
+
+            /* if the list already contains this card create a book
+            after removing the old card */
+            Card cardInHand = this.getCard(newValue);
+            if(cardInHand != null){
+                score++;
+                books[newValue.ordinal()]++;
+                hand.remove(cardInHand);
+            }
+
+            /* else add the new card to your hand */
+            else{
+                hand.add(newCard);
+            }
+        }
+        /* else don't draw */
+
+        /* return a reference to the drawn card */
+        return newCard;
     }
 
     /* check to ensure that a player has the
@@ -69,54 +90,6 @@ public abstract class Player{
         }
 
         /* else Go-Fish */
-        return false;
-    }
-
-    /* find and remove books */
-    public void collectBooks(){
-        /* check each element in list for duplicates:
-        iterate through each element in the list... */
-        for(int i = 0; i < hand.size(); i++){
-            /* check if the current card in the hand is valid */
-            Card current_card = hand.get(i);
-            if(current_card != null){
-                /* if the card is valid, get it's value... */
-                Card.Value current_val = current_card.getValue();
-                /* if there are other cards in your hand with the same value
-                null them out */
-                if(nullDuplicates(i+1, current_val)){
-                    /* if there were duplicates, null out the current value
-                    and mark the new book in the books record */
-                    hand.set(i, null);
-                    books[current_val.ordinal()]++;
-                    score++;
-                }
-                /* else do nothing */
-            }
-        }
-
-        /* remove any nulled out values */
-        for(ListIterator<Card> iterator = hand.listIterator(); iterator.hasNext(); ){
-            Card nextCard = iterator.next();
-            if(nextCard == null)
-                iterator.remove();
-        }
-    }
-
-    /* used by collectBooks to help remove duplicates from the hand
-    nulls out the first duplicate (only the first because books are size 2) in
-    the hand to be removed later does not modify the size of the hand by itself*/
-    private boolean nullDuplicates(int startIndex, Card.Value val){
-        /* search for a duplicate */
-        for(int i = startIndex; i < hand.size(); i++){
-            Card currentCard = hand.get(i);
-            if(currentCard != null && currentCard.getValue() == val){
-                /* if a duplicate is found, null out the duplicate and return */
-                hand.set(i, null);
-                return true;
-            }
-        }
-        /* if no duplicates found return that false */
         return false;
     }
 

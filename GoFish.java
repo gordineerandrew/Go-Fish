@@ -30,6 +30,7 @@ public class GoFish{
     /* GLOBAL CONSTANTS */
     private static final int MAX_OPPONENTS = 3;
     private static final int STARTING_HAND = 7;
+    private static final boolean DEBUG = true;
 
     public static void main(String[] args){
         /*
@@ -64,16 +65,11 @@ public class GoFish{
         /* deal cards to human player */
         dealCards(user);
         user.displayState();
-        user.collectBooks();
-        user.displayState();
         /* deal starting hand to each opponent */
         for(int i = 0; i < numOpponents; i++){
             AIPlayer opp = opponents.get(i);
             dealCards(opp);
             opp.displayState();
-            opp.collectBooks();
-            opp.displayState();
-
         }
 
 
@@ -81,7 +77,13 @@ public class GoFish{
     }
 
     public static void dealCards(Player p){
-        for(int i = 0; i < STARTING_HAND; i++)
-            p.drawCard();
+        for(int i = 0; i < STARTING_HAND; i++){
+            Card c = p.drawCard();
+            if(DEBUG && c!=null)
+                System.out.print(c+" ");
+        }
+
+        if(DEBUG)
+            System.out.println();
     }
 }
