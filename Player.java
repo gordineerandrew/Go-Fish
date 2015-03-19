@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public abstract class Player{
     private static final int MAX_TOTAL_BOOKS = 13;
