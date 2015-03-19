@@ -70,7 +70,7 @@ public class GoFish{
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
             opponents.add(opp);
-            all_players.add(opp)
+            all_players.add(opp);
         }
 
         /* deal 7 cards to each players */
@@ -87,8 +87,8 @@ public class GoFish{
         /* choose player to begin game */
         /* current_player stores the index of the player in the alllist */
         int current_player = chooseStartingPlayer(all_players);
-        System.out.println("%s will begin the game");
-        System.out.println("Press ENTER to let the game begin");
+        System.out.printf("%s will begin the game\n", all_players.get(current_player));
+        System.out.println("Press any key and then ENTER to let the game begin");
         userIn.next();
 
         /* begin game loop */
@@ -119,15 +119,15 @@ public class GoFish{
         /* a random number generate to generate the dice rolls */
         Random r = new Random();
 
-        System.out.println("Rolling dice...");
+        System.out.println("Rolling 20 sided dice to decide starting player...");
         /* each player will roll a dice
         the player with the highest dice roll will go first */
-        for(int i = 0; i < num_players){
+        for(int i = 0; i < playerlist.size(); i++){
             /* wait for half a second to give player time to read info */
             Thread.sleep(HALF_SEC);
 
-            /* roll a number 1 - 6 */
-            int players_roll = r.nextInt()+1;
+            /* roll a number 1 - 20 */
+            int players_roll = r.nextInt(20)+1;
             if(players_roll > max_roll){
                 max_roll = players_roll;
                 starting_player = i;
