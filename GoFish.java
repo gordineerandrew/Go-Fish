@@ -49,9 +49,9 @@ public class GoFish{
         /* while the player inputs a number not between 0 and the max prompt for another number */
         while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= MAX_OPPONENTS)){
             System.out.println("Number of Opponents must be between 0 and " + MAX_OPPONENTS);
-            System.out.print("How many opponents (1-3)? ");
+            System.out.print("How many opponents (1-" + MAX_OPPONENTS + ")? ");
         }
-
+        System.out.println();
         /* create the deck */
         Deck deck = new Deck();
 
@@ -75,13 +75,19 @@ public class GoFish{
         }
 
         /* deal 7 cards to each players */
-        /* deal cards to human player */
+        /* deal starting hand to human player */
         dealCards(user);
-        user.displayState();
         /* deal starting hand to each opponent */
         for(int i = 0; i < numOpponents; i++){
             AIPlayer opp = opponents.get(i);
             dealCards(opp);
+        }
+
+        System.out.println("\n");
+        /* Display all players information */
+        user.displayState();
+        for(int i = 0; i < numOpponents; i++){
+            AIPlayer opp = opponents.get(i);
             opp.displayState();
         }
 
@@ -99,6 +105,7 @@ public class GoFish{
     /* static routine that deals cards out to each player
     at the beginning of each game */
     public static void dealCards(Player p){
+        System.out.print(p.toString() + " was dealt: ");
         for(int i = 0; i < STARTING_HAND; i++){
             Card c = p.drawCard();
             if(DEBUG && c!=null)
@@ -120,7 +127,7 @@ public class GoFish{
         /* a random number generate to generate the dice rolls */
         Random r = new Random();
 
-        System.out.println("Rolling 20 sided dice to decide starting player...");
+        System.out.println("\n\nRolling 20 sided dice to decide starting player...");
         /* each player will roll a dice
         the player with the highest dice roll will go first */
         for(int i = 0; i < playerlist.size(); i++){
@@ -135,7 +142,12 @@ public class GoFish{
             }
 
             /* display the player's roll */
-            System.out.printf("%s rolled a... \t%d\n", playerlist.get(i), players_roll);
+            if(i == 0){
+                System.out.printf("%s rolled a... \t\t%d\n", playerlist.get(i), players_roll);
+            }else{
+                System.out.printf("%s rolled a... \t%d\n", playerlist.get(i), players_roll);
+            }
+
         }
 
         Thread.sleep(TIME_DELAY);
