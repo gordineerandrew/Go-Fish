@@ -66,7 +66,7 @@ public class GoFish{
         /* generate opponents */
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
         for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = new AIPlayer("Computer "+(i+1), deck);
+            AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
             opponents.add(opp);
