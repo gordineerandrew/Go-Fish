@@ -25,6 +25,7 @@ DONE * select player to take the first turn at random
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
+import java.io.IOException;
 
 public class GoFish{
 
@@ -34,7 +35,7 @@ public class GoFish{
     private static final int TIME_DELAY = 1000;
     private static final boolean DEBUG = true;
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws IOException, InterruptedException{
         /*
         GAME SETUP
         */
@@ -88,8 +89,8 @@ public class GoFish{
         /* current_player stores the index of the player in the alllist */
         int current_player = chooseStartingPlayer(all_players);
         System.out.printf("%s will begin the game\n", all_players.get(current_player));
-        System.out.println("Press any key and then ENTER to let the game begin");
-        userIn.next();
+        System.out.println("Press ENTER to let the game begin");
+        System.in.read();
 
         /* begin game loop */
 
