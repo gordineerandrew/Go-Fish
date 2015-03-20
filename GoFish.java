@@ -34,6 +34,7 @@ public class GoFish{
     private static final int STARTING_HAND = 7;
     private static final int TIME_DELAY = 1000;
     private static final boolean DEBUG = true;
+    private static String PLAYER_NAME = "Player 1";
 
     public static void main(String[] args) throws IOException, InterruptedException{
         /*
@@ -60,7 +61,7 @@ public class GoFish{
         ArrayList<Player> all_players = new ArrayList<Player>(numOpponents+1);
 
         /* generate human player */
-        HumanPlayer user = new HumanPlayer("Player 1", deck);
+        HumanPlayer user = new HumanPlayer(PLAYER_NAME, deck);
         /* add to all player list to keep track of user */
         all_players.add(user);
 
@@ -86,9 +87,11 @@ public class GoFish{
         System.out.println("\n");
         /* Display all players information */
         user.displayState();
-        for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = opponents.get(i);
-            opp.displayState();
+        if(DEBUG){
+            for(int i = 0; i < numOpponents; i++){
+                AIPlayer opp = opponents.get(i);
+                opp.displayState();
+            }
         }
 
         /* choose player to begin game */
@@ -98,28 +101,66 @@ public class GoFish{
         System.out.println("Press ENTER to let the game begin");
         System.in.read();
 
-        /* begin game loop */
+        /* Create the order that the players will play in for game loop simplification */
+        int[] playOrder = new int[numOpponents + 1];
+        for(int i = 0; i < playOrder.length; i++){
+            playOrder[i] = current_player % playOrder.length;
+            current_player++;
+            //System.out.println(all_players.get(playOrder[i]));
+        }
 
+        /* begin game loop */
+        /* boolean to end game when no deck and no hands remain */
+        boolean gameOver = false;
+
+        while(!gameOver){
+            for(int i = 0; i < numOpponents + 1; i++){
+                System.out.println();
+
+
+
+            }
+            gameOver = true;
+        }
     }
 
     /* static routine that deals cards out to each player
     at the beginning of each game */
-    public static void dealCards(Player p){
-        System.out.print(p.toString() + "\t was dealt: ");
-        for(int i = 0; i < STARTING_HAND; i++){
-            Card c = p.drawCard();
-            if(DEBUG && c!=null)
+    public static void dealCards(Player p)throws InterruptedException{
+        if(DEBUG){
+            System.out.print(p.toString() + "\t was dealt: ");
+                    for(int i = 0; i < STARTING_HAND; i++){
+                        Card c = p.drawCard();
+                        if(DEBUG && c!=null)
+                            System.out.print(c+" ");
+                    }
+                    if(DEBUG)
+                        System.out.println();
+        /* else if human, print what player is dealt */
+        }else if(p.toString().equals(PLAYER_NAME)){
+            System.out.print(p.toString() + " was dealt: ");
+            for(int i = 0; i < STARTING_HAND; i++){
+                Card c = p.drawCard();
                 System.out.print(c+" ");
+            }
+            System.out.println();
+            Thread.sleep(TIME_DELAY);
+        /* else if computer, hide what computer is dealt */
+        }else{
+            for(int i = 0; i < STARTING_HAND; i++){
+                Card c = p.drawCard();
+            }
+            System.out.println(STARTING_HAND + " cards were dealt to " + p.toString());
+            Thread.sleep(TIME_DELAY);
         }
 
-        if(DEBUG)
-            System.out.println();
     }
 
     /* chooses the starting player by having each player
     roll a random die. The player with the highest roll
     is the player who starts */
-    public static int chooseStartingPlayer(ArrayList<Player> playerlist) throws InterruptedException{
+    public static int chooseStartingPlayer(ArrayList<Player> playerlist)
+                throws InterruptedException{
         /* keeps track of the largest roll */
         int max_roll = 0;
         /* keeps track of the player with the largest roll */

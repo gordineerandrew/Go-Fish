@@ -2,7 +2,11 @@ A list of everything that still needs to be completed for this project.
 
 TO DO:
     Game Loop
+        using order based on first to go
+        Go clockwise
+            Draw card IFF incorrect guess and deck isn't empty
+            Else if deck empty and incorrect guess, do nothing
+            else grab card from other player and make book
     Display Tweaks (To make more readable... Space between lines and adding a
             huge amount of whitespace after a turn to avoid clutter)
     *Optional* Add a name option for the human player
-    
