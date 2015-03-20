@@ -105,7 +105,7 @@ public class GoFish{
     /* static routine that deals cards out to each player
     at the beginning of each game */
     public static void dealCards(Player p){
-        System.out.print(p.toString() + " was dealt: ");
+        System.out.print(p.toString() + "\t was dealt: ");
         for(int i = 0; i < STARTING_HAND; i++){
             Card c = p.drawCard();
             if(DEBUG && c!=null)

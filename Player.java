@@ -93,7 +93,9 @@ public abstract class Player{
     }
 
     public void displayHand(){
-        System.out.println(hand);
+        String s = hand.toString();
+        System.out.println(s.substring(1,s.length()-1));
+        //System.out.println(hand);
     }
 
     public String toString(){
@@ -101,7 +103,9 @@ public abstract class Player{
     }
 
     public void displayState(){
-        System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, hand.toString());
+        String s = hand.toString();
+        s = s.substring(1,s.length()-1);
+        System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, s);
     }
 
 }
