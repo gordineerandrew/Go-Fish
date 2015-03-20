@@ -31,7 +31,7 @@ public class GoFish{
     /* GLOBAL CONSTANTS */
     private static final int MAX_OPPONENTS = 3;
     private static final int STARTING_HAND = 7;
-    private static final int ONE_SEC = 1000;
+    private static final int TIME_DELAY = 1000;
     private static final boolean DEBUG = true;
 
     public static void main(String[] args) throws InterruptedException{
@@ -66,7 +66,7 @@ public class GoFish{
         /* generate opponents */
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
         for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = new AIPlayer("Opponent "+(i+1), deck);
+            AIPlayer opp = new AIPlayer("Computer "+(i+1), deck);
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
             opponents.add(opp);
@@ -124,7 +124,7 @@ public class GoFish{
         the player with the highest dice roll will go first */
         for(int i = 0; i < playerlist.size(); i++){
             /* wait for half a second to give player time to read info */
-            Thread.sleep(ONE_SEC);
+            Thread.sleep(TIME_DELAY);
 
             /* roll a number 1 - 20 */
             int players_roll = r.nextInt(20)+1;
@@ -137,7 +137,7 @@ public class GoFish{
             System.out.printf("%s rolled a... \t%d\n", playerlist.get(i), players_roll);
         }
 
-        Thread.sleep(ONE_SEC);
+        Thread.sleep(TIME_DELAY);
 
         assert starting_player != -1;
         return starting_player;
