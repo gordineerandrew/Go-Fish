@@ -146,6 +146,7 @@ public class GoFish{
     /* static routine that deals cards out to each player
     at the beginning of each game */
     public static void dealCards(Player p)throws InterruptedException{
+
         if(DEBUG){
             System.out.print(p.toString() + "\t was dealt: ");
                     for(int i = 0; i < STARTING_HAND; i++){
