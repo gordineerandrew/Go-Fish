@@ -119,6 +119,7 @@ public class GoFish{
                 /* if it is human player, give the choices */
                 if(all_players.get(playOrder[i]).toString().equals(PLAYER_NAME)){
                     System.out.println("Choose the number of the player you'd like to choose a card from...");
+                    /* Prints out all opponent options and choices to the left */
                     for(int k = 1; k <= numOpponents; k++){
                         System.out.println(k + ". " + all_players.get(k));
                     }
@@ -126,6 +127,7 @@ public class GoFish{
                     int player_choice = userIn.nextInt();
                     System.out.println();
                     System.out.println("Choose the number of the card you'd like to ask for...");
+                    /* Prints out all card choices in hand and choices to the left */
                     for(int j = 0; j < all_players.get(playOrder[i]).hand.size(); j++){
                         System.out.println((j +1) + ". " + all_players.get(playOrder[i]).get(j));
                     }
