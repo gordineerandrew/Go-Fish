@@ -191,7 +191,7 @@ public class GoFish{
         /* each player will roll a dice
         the player with the highest dice roll will go first */
         for(int i = 0; i < playerlist.size(); i++){
-            /* wait for half a second to give player time to read info */
+            /* wait for a second to give player time to read info */
             Thread.sleep(TIME_DELAY);
 
             /* roll a number 1 - 20 */

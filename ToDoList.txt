@@ -1,5 +1,25 @@
 A list of everything that still needs to be completed for this project.
 
+Scott NOTES
+
+* dealCards will need to be reworked a little bit. Not functionally, just design wise
+because there is a bit of redundant code and you aren't checking for null returns from
+drawCard()
+
+* Minor minor minor change to chooseStartingPlayer. At the bottom where you pad the output
+with an extra tab if it is the human player (so that the roll outcomes line up), I think
+it would be a good idea to go even further with that and generalize it to any name within
+a certain size instead of hardcoding each name as 1 or 2 tab characters. I can't remember
+exactly how to do it, but I know that there is printf functionality that allows you to specificy
+how many characters a chunk of your output can take up.
+
+* Inside of gameloop it would be a good idea to get rid of the for loop. Using a for loop
+adds an unnecessary conditional check that we don't need. I think simply using a modulus
+and continually incrementing some kind of player count would be simpler and work really
+well with the native array implementation that you have. Also it looks like you are using
+the Arraylist get() more than is necessary. We should 'cache' the current player within
+some kind of variable to keep from doing unnecessary work
+
 TO DO:
     Game Loop
         using order based on first to go
