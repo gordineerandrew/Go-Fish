@@ -35,6 +35,7 @@ public class GoFish{
     private static final int TIME_DELAY = 1000;
     private static final boolean DEBUG = true;
     private static String PLAYER_NAME = "Player 1";
+    private static int NAME_WIDTH = 0;
 
     public static void main(String[] args) throws IOException, InterruptedException{
         /*
@@ -62,6 +63,7 @@ public class GoFish{
 
         /* generate human player */
         HumanPlayer user = new HumanPlayer(PLAYER_NAME, deck);
+        NAME_WIDTH = Math.max(NAME_WIDTH, user.getName().length());
         /* add to all player list to keep track of user */
         all_players.add(user);
 
@@ -69,6 +71,8 @@ public class GoFish{
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
         for(int i = 0; i < numOpponents; i++){
             AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
+            NAME_WIDTH = Math.max(NAME_WIDTH, opp.getName().length());
+
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
             opponents.add(opp);
@@ -176,6 +180,7 @@ public class GoFish{
 
     }
 
+
     /* chooses the starting player by having each player
     roll a random die. The player with the highest roll
     is the player who starts */
@@ -203,11 +208,12 @@ public class GoFish{
             }
 
             /* display the player's roll */
-            if(i == 0){
-                System.out.printf("%s rolled a... \t\t%d\n", playerlist.get(i), players_roll);
-            }else{
-                System.out.printf("%s rolled a... \t%d\n", playerlist.get(i), players_roll);
-            }
+            System.out.printf("%-"+(NAME_WIDTH+13)+"s %d\n",playerlist.get(i).getName()+" rolled a...", players_roll);
+            // if(i == 0){
+            //     System.out.printf("%s rolled a... \t\t%d\n", playerlist.get(i), players_roll);
+            // }else{
+            //     System.out.printf("%s rolled a... \t%d\n", playerlist.get(i), players_roll);
+            // }
 
         }
 
