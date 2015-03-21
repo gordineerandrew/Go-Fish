@@ -102,6 +102,10 @@ public abstract class Player{
         return name;
     }
 
+    public String get(int index){
+        return hand.get(index) + "";
+    }
+
     public void displayState(){
         String s = hand.toString();
         s = s.substring(1,s.length()-1);

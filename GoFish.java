@@ -115,10 +115,27 @@ public class GoFish{
 
         while(!gameOver){
             for(int i = 0; i < numOpponents + 1; i++){
-                System.out.println();
+                System.out.println(all_players.get(playOrder[i]) + "'s turn.\n");
+                /* if it is human player, give the choices */
+                if(all_players.get(playOrder[i]).toString().equals(PLAYER_NAME)){
+                    System.out.println("Choose the number of the player you'd like to choose a card from...");
+                    for(int k = 1; k <= numOpponents; k++){
+                        System.out.println(k + ". " + all_players.get(k));
+                    }
+                    System.out.print("Choice: ");
+                    int player_choice = userIn.nextInt();
+                    System.out.println();
+                    System.out.println("Choose the number of the card you'd like to ask for...");
+                    for(int j = 0; j < all_players.get(playOrder[i]).hand.size(); j++){
+                        System.out.println((j +1) + ". " + all_players.get(playOrder[i]).get(j));
+                    }
+                    System.out.print("Choice: ");
+                    int card_choice = userIn.nextInt();
+                    System.out.println();
+                /* Otherwise, the computer chooses a player and card */
+                }else{
 
-
-
+                }
             }
             gameOver = true;
         }
