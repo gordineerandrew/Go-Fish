@@ -18,14 +18,6 @@ remember that we are working in a language with polymorphism. Behavior that is
 dependent on the type of player (human vs AI) should be dealt with as separate
 implementations of their drawingCards functions.
 
-* Minor minor minor change to chooseStartingPlayer. At the bottom where you pad
-the output with an extra tab if it is the human player (so that the roll outcomes
-line up), I think it would be a good idea to go even further with that and generalize
-it to any name within a certain size instead of hardcoding each name as 1 or 2 tab
-characters. I can't remember exactly how to do it, but I know that there is printf
-functionality that allows you to specify how many characters a chunk of your output
-can take up.
-
 * Inside of gameloop it would be a good idea to get rid of the for loop. Using a
 for loop adds an unnecessary conditional check that we don't need. I think simply
 using a modulus and continually incrementing some kind of player count would be
