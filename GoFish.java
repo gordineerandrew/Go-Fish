@@ -106,22 +106,13 @@ public class GoFish{
         System.out.println("Press ENTER to let the game begin");
         System.in.read();
 
-        /* Create the order that the players will play in for game loop simplification */
-        Player[] playOrder = new Player[numOpponents + 1];
-        for(int i = 0; i < playOrder.length; i++){
-            playOrder[i] = all_players.get(player_index % playOrder.length);
-            player_index++;
-        }
-        /* set the first player to the beginning of the playOrder array */
-        player_index = 0;
-
         /* begin game loop */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
 
         while(!gameOver){
 
-            Player current_player = playOrder[player_index%playOrder.length];
+            Player current_player = all_players.get(player_index++ % all_players.size());
             System.out.println(current_player + "'s turn.\n");
 
             // CODE FOR HUMAN PLAYER
@@ -144,10 +135,9 @@ public class GoFish{
             //
             //
 
-            /* advance to the next player */
-            player_index++;
-
-            if(DEBUG && player_index > playOrder.length)
+            /* debug and player_index > 10 are just an arbitrary quit condition
+            until lose conditions are established */
+            if((DEBUG && player_index >  10) || player_index > 10)
                 gameOver = true;
         }
     }
