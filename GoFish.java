@@ -101,50 +101,54 @@ public class GoFish{
 
         /* choose player to begin game */
         /* current_player stores the index of the player in the alllist */
-        int current_player = chooseStartingPlayer(all_players);
-        System.out.printf("%s will begin the game\n", all_players.get(current_player));
+        int player_index = chooseStartingPlayer(all_players);
+        System.out.printf("%s will begin the game\n", all_players.get(player_index));
         System.out.println("Press ENTER to let the game begin");
         System.in.read();
 
         /* Create the order that the players will play in for game loop simplification */
-        int[] playOrder = new int[numOpponents + 1];
+        Player[] playOrder = new Player[numOpponents + 1];
         for(int i = 0; i < playOrder.length; i++){
-            playOrder[i] = current_player % playOrder.length;
-            current_player++;
-            //System.out.println(all_players.get(playOrder[i]));
+            playOrder[i] = all_players.get(player_index % playOrder.length);
+            player_index++;
         }
+        /* set the first player to the beginning of the playOrder array */
+        player_index = 0;
 
         /* begin game loop */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
 
         while(!gameOver){
-            for(int i = 0; i < numOpponents + 1; i++){
-                System.out.println(all_players.get(playOrder[i]) + "'s turn.\n");
-                /* if it is human player, give the choices */
-                if(all_players.get(playOrder[i]).toString().equals(PLAYER_NAME)){
-                    System.out.println("Choose the number of the player you'd like to choose a card from...");
-                    /* Prints out all opponent options and choices to the left */
-                    for(int k = 1; k <= numOpponents; k++){
-                        System.out.println(k + ". " + all_players.get(k));
-                    }
-                    System.out.print("Choice: ");
-                    int player_choice = userIn.nextInt();
-                    System.out.println();
-                    System.out.println("Choose the number of the card you'd like to ask for...");
-                    /* Prints out all card choices in hand and choices to the left */
-                    for(int j = 0; j < all_players.get(playOrder[i]).hand.size(); j++){
-                        System.out.println((j +1) + ". " + all_players.get(playOrder[i]).get(j));
-                    }
-                    System.out.print("Choice: ");
-                    int card_choice = userIn.nextInt();
-                    System.out.println();
-                /* Otherwise, the computer chooses a player and card */
-                }else{
 
-                }
-            }
-            gameOver = true;
+            Player current_player = playOrder[player_index%playOrder.length];
+            System.out.println(current_player + "'s turn.\n");
+
+            // CODE FOR HUMAN PLAYER
+            // System.out.println("Choose the number of the player you'd like to choose a card from...");
+            // /* Prints out all opponent options and choices to the left */
+            // for(int k = 1; k <= numOpponents; k++){
+            //     System.out.println(k + ". " + all_players.get(k));
+            // }
+            // System.out.print("Choice: ");
+            // int player_choice = userIn.nextInt();
+            // System.out.println();
+            // System.out.println("Choose the number of the card you'd like to ask for...");
+            // /* Prints out all card choices in hand and choices to the left */
+            // for(int j = 0; j < all_players.get(playOrder[i]).hand.size(); j++){
+            //     System.out.println((j +1) + ". " + all_players.get(playOrder[i]).get(j));
+            // }
+            // System.out.print("Choice: ");
+            // int card_choice = userIn.nextInt();
+            // System.out.println();
+            //
+            //
+
+            /* advance to the next player */
+            player_index++;
+
+            if(DEBUG && player_index > playOrder.length)
+                gameOver = true;
         }
     }
 
