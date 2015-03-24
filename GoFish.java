@@ -29,13 +29,6 @@ import java.io.IOException;
 
 public class GoFish{
 
-    /* GLOBAL CONSTANTS */
-    private static final int MAX_OPPONENTS = 3;
-    private static final int STARTING_HAND = 7;
-    private static final int TIME_DELAY = 1000;
-    private static final boolean DEBUG = true;
-    private static String PLAYER_NAME = "Player 1";
-    private static int LONGEST_NAME_WIDTH = 0;
 
     public static void main(String[] args) throws IOException, InterruptedException{
         /*
@@ -49,9 +42,9 @@ public class GoFish{
         System.out.print("How many opponents (1-3)? ");
         int numOpponents;
         /* while the player inputs a number not between 0 and the max prompt for another number */
-        while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= MAX_OPPONENTS)){
-            System.out.println("Number of Opponents must be between 0 and " + MAX_OPPONENTS);
-            System.out.print("How many opponents (1-" + MAX_OPPONENTS + ")? ");
+        while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
+            System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
+            System.out.print("How many opponents (1-" + GameConstants.MAX_OPPONENTS + ")? ");
         }
         System.out.println();
         /* create the deck */
@@ -62,9 +55,9 @@ public class GoFish{
         ArrayList<Player> all_players = new ArrayList<Player>(numOpponents+1);
 
         /* generate human player */
-        HumanPlayer user = new HumanPlayer(PLAYER_NAME, deck);
+        HumanPlayer user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
         /* update the longest name width when another player is created */
-        LONGEST_NAME_WIDTH = Math.max(LONGEST_NAME_WIDTH, user.getName().length());
+        GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
         /* add to all player list to keep track of user */
         all_players.add(user);
 
@@ -72,7 +65,7 @@ public class GoFish{
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
         for(int i = 0; i < numOpponents; i++){
             AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
-            LONGEST_NAME_WIDTH = Math.max(LONGEST_NAME_WIDTH, opp.getName().length());
+            GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, opp.getName().length());
 
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
@@ -81,18 +74,12 @@ public class GoFish{
         }
 
         /* deal 7 cards to each players */
-        /* deal starting hand to human player */
-        dealCards(user);
-        /* deal starting hand to each opponent */
-        for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = opponents.get(i);
-            dealCards(opp);
-        }
+        dealCards(all_players);
 
         System.out.println("\n");
         /* Display all players information */
         user.displayState();
-        if(DEBUG){
+        if(GameConstants.DEBUG){
             for(int i = 0; i < numOpponents; i++){
                 AIPlayer opp = opponents.get(i);
                 opp.displayState();
@@ -135,43 +122,49 @@ public class GoFish{
             //
             //
 
-            /* debug and player_index > 10 are just an arbitrary quit condition
+            /* GameConstants.DEBUG and player_index > 10 are just an arbitrary quit condition
             until lose conditions are established */
-            if((DEBUG && player_index >  10) || player_index > 10)
+            if((GameConstants.DEBUG && player_index >  10) || player_index > 10)
                 gameOver = true;
         }
     }
 
     /* static routine that deals cards out to each player
     at the beginning of each game */
-    public static void dealCards(Player p)throws InterruptedException{
-
-        if(DEBUG){
-            System.out.print(p.toString() + "\t was dealt: ");
-                    for(int i = 0; i < STARTING_HAND; i++){
-                        Card c = p.drawCard();
-                        if(DEBUG && c!=null)
-                            System.out.print(c+" ");
-                    }
-                    if(DEBUG)
-                        System.out.println();
-        /* else if human, print what player is dealt */
-        }else if(p.toString().equals(PLAYER_NAME)){
-            System.out.print(p.toString() + " was dealt: ");
-            for(int i = 0; i < STARTING_HAND; i++){
-                Card c = p.drawCard();
-                System.out.print(c+" ");
+    public static void dealCards(ArrayList<Player> players)throws InterruptedException{
+        for(Player p: players){
+            for(int i = 0; i < GameConstants.STARTING_HAND; i++){
+                p.drawCard();
             }
-            System.out.println();
-            Thread.sleep(TIME_DELAY);
-        /* else if computer, hide what computer is dealt */
-        }else{
-            for(int i = 0; i < STARTING_HAND; i++){
-                Card c = p.drawCard();
-            }
-            System.out.println(STARTING_HAND + " cards were dealt to " + p.toString());
-            Thread.sleep(TIME_DELAY);
+            Thread.sleep(GameConstants.TIME_DELAY);
         }
+
+        // if(GameConstants.DEBUG){
+        //     System.out.print(p.toString() + "\t was dealt: ");
+        //             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
+        //                 Card c = p.drawCard();
+        //                 if(GameConstants.DEBUG && c!=null)
+        //                     System.out.print(c+" ");
+        //             }
+        //             if(GameConstants.DEBUG)
+        //                 System.out.println();
+        // /* else if human, print what player is dealt */
+        // }else if(p.toString().equals(GameConstants.PLAYER_NAME)){
+        //     System.out.print(p.toString() + " was dealt: ");
+        //     for(int i = 0; i < GameConstants.STARTING_HAND; i++){
+        //         Card c = p.drawCard();
+        //         System.out.print(c+" ");
+        //     }
+        //     System.out.println();
+        //     Thread.sleep(GameConstants.TIME_DELAY);
+        // /* else if computer, hide what computer is dealt */
+        // }else{
+        //     for(int i = 0; i < GameConstants.STARTING_HAND; i++){
+        //         Card c = p.drawCard();
+        //     }
+        //     System.out.println(GameConstants.STARTING_HAND + " cards were dealt to " + p.toString());
+        //     Thread.sleep(GameConstants.TIME_DELAY);
+        // }
 
     }
 
@@ -193,7 +186,7 @@ public class GoFish{
         the player with the highest dice roll will go first */
         for(int i = 0; i < playerlist.size(); i++){
             /* wait for a second to give player time to read info */
-            Thread.sleep(TIME_DELAY);
+            Thread.sleep(GameConstants.TIME_DELAY);
 
             /* roll a number 1 - 20 */
             int players_roll = r.nextInt(20)+1;
@@ -204,10 +197,10 @@ public class GoFish{
 
             /* display the player's roll */
             /* use the longest player's name + 13 characters for the " rolled a..." */
-            System.out.printf("%-"+(LONGEST_NAME_WIDTH+13)+"s %d\n",playerlist.get(i).getName()+" rolled a...", players_roll);
+            System.out.printf("%-"+(GameConstants.LONGEST_NAME_WIDTH+13)+"s %d\n",playerlist.get(i).getName()+" rolled a...", players_roll);
         }
 
-        Thread.sleep(TIME_DELAY);
+        Thread.sleep(GameConstants.TIME_DELAY);
 
         assert starting_player != -1;
         return starting_player;

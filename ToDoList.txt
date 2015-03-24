@@ -2,34 +2,6 @@ A list of everything that still needs to be completed for this project.
 
 Scott NOTES
 
-* dealCards will need to be reworked a little bit. Not functionally, just design
-wise because there is a bit of redundant code and you aren't checking for null returns
-from drawCard(). A couple of ways we could accomplish this is by just using a simple
-OR  statement. Like whether the behavior for the game being in debug mode or the
-player drawing cards is a humanplayer is the same behavior so instead of having
-it in two separate conditions, put it within the same condition basically
-if(debug || player.toString().equals(PLAYER_NAME)). Another minor note is that instead
-of comparing name strings to check if the player is human or not we could just use
-the instanceof keyword to figure out whether the player is a HumanPlayer or not.
-if(debug || p instanceof HumanPlayer) using instance of makes the intention of the
-design a little bit clearer and doesn't require us to compare strings which is an
-O(N) algorithm. BUT BUT BUT those are both kind of lesser solutions when we just
-remember that we are working in a language with polymorphism. Behavior that is
-dependent on the type of player (human vs AI) should be dealt with as separate
-implementations of their drawingCards functions.
-
-* Inside of gameloop it would be a good idea to get rid of the for loop. Using a
-for loop adds an unnecessary conditional check that we don't need. I think simply
-using a modulus and continually incrementing some kind of player count would be
-simpler and work really well with the native array implementation that you have.
-(although we'd have to change the array from an int arr to a Player array). Also
-it looks like you are using the Arraylist get() more than is necessary. We should
-'cache' the current player within some kind of variable to keep from doing unnecessary
-work. This is also another place we should just be using polymorphism instead of 
-if-else statements. Different types of players have different behavior during their
-turns and that should be implemented if at all possible within their respective
-classes instead of in these if-else blocks.
-
 TO DO:
     Game Loop
         using order based on first to go
