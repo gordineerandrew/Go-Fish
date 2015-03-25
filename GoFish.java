@@ -11,10 +11,10 @@ DONE * select player to take the first turn at random
 * confirm that match is appropriate
 * if not redo
 * if selected correctly then book is created
-    * gets to go another turn
+* gets to go another turn
 * else go fish
-    * draw card from deck if there are any
-    * END TURN
+* draw card from deck if there are any
+* END TURN
 
 ### MISC GAME LOOP INFO
 * during player turns go through each of these steps waiting for inputs
@@ -29,16 +29,14 @@ import java.io.IOException;
 
 public class GoFish{
 
+    /* initialize a scanner to get user input throughout the game */
+    public static Scanner userIn = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException, InterruptedException{
         /*
         GAME SETUP
         */
-
-        /* initialize a scanner to get user input throughout the game */
-        Scanner userIn = new Scanner(System.in);
-
-        /* PROMPT USER FOR NUMBER OF AI PLAYERS TO PLAY AGAINST */
+        /* Prompt user for number of opponents to go against */
         System.out.print("How many opponents (1-3)? ");
         int numOpponents;
         /* while the player inputs a number not between 0 and the max prompt for another number */
@@ -46,6 +44,9 @@ public class GoFish{
             System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
             System.out.print("How many opponents (1-" + GameConstants.MAX_OPPONENTS + ")? ");
         }
+        /*flush the input buffer of new line characters */
+        userIn.nextLine();
+
         System.out.println();
         /* create the deck */
         Deck deck = new Deck();
@@ -92,45 +93,35 @@ public class GoFish{
         }
 
         /* choose player to begin game */
-        /* current_player stores the index of the player in the alllist */
+        /* currentPlayer stores the index of the player in the alllist */
         int player_index = chooseStartingPlayer(all_players);
         System.out.printf("%s will begin the game\n", all_players.get(player_index));
         System.out.println("Press ENTER to let the game begin");
         System.in.read();
 
-        /* begin game loop */
+        /* GAME LOOP
+        */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
 
         while(!gameOver){
 
-            Player current_player = all_players.get(player_index++ % all_players.size());
-            System.out.println(current_player + "'s turn.\n");
+            /* select the current player to start their turn */
+            Player currentPlayer = all_players.get(player_index++ % all_players.size());
+            System.out.println(currentPlayer + "'s turn.\n");
 
-            // CODE FOR HUMAN PLAYER
-            // System.out.println("Choose the number of the player you'd like to choose a card from...");
-            // /* Prints out all opponent options and choices to the left */
-            // for(int k = 1; k <= numOpponents; k++){
-            //     System.out.println(k + ". " + all_players.get(k));
-            // }
-            // System.out.print("Choice: ");
-            // int player_choice = userIn.nextInt();
-            // System.out.println();
-            // System.out.println("Choose the number of the card you'd like to ask for...");
-            // /* Prints out all card choices in hand and choices to the left */
-            // for(int j = 0; j < all_players.get(playOrder[i]).hand.size(); j++){
-            //     System.out.println((j +1) + ". " + all_players.get(playOrder[i]).get(j));
-            // }
-            // System.out.print("Choice: ");
-            // int card_choice = userIn.nextInt();
-            // System.out.println();
-            //
-            //
+            Player requestedPlayer = selectPlayer(all_players, currentPlayer);
+            Card.Value requestedCard = selectCard(currentPlayer);
 
-            /* GameConstants.DEBUG and player_index > 10 are just an arbitrary quit condition
-            until lose conditions are established */
-            if((GameConstants.DEBUG && player_index >  10) || player_index > 10)
-                gameOver = true;
+            /* ask the requestedPlayer for the requestedCard */
+            if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
+                /* if they don't have it GO FISH */
+                System.out.println("GO-FISH!");
+                currentPlayer.drawCard();
+            }
+
+            /* update the win condition */
+            gameOver = deck.deckEmpty() || currentPlayer.handEmpty() || requestedPlayer.handEmpty();
         }
     }
 
@@ -143,34 +134,6 @@ public class GoFish{
             }
             Thread.sleep(GameConstants.TIME_DELAY);
         }
-
-        // if(GameConstants.DEBUG){
-        //     System.out.print(p.toString() + "\t was dealt: ");
-        //             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
-        //                 Card c = p.drawCard();
-        //                 if(GameConstants.DEBUG && c!=null)
-        //                     System.out.print(c+" ");
-        //             }
-        //             if(GameConstants.DEBUG)
-        //                 System.out.println();
-        // /* else if human, print what player is dealt */
-        // }else if(p.toString().equals(GameConstants.PLAYER_NAME)){
-        //     System.out.print(p.toString() + " was dealt: ");
-        //     for(int i = 0; i < GameConstants.STARTING_HAND; i++){
-        //         Card c = p.drawCard();
-        //         System.out.print(c+" ");
-        //     }
-        //     System.out.println();
-        //     Thread.sleep(GameConstants.TIME_DELAY);
-        // /* else if computer, hide what computer is dealt */
-        // }else{
-        //     for(int i = 0; i < GameConstants.STARTING_HAND; i++){
-        //         Card c = p.drawCard();
-        //     }
-        //     System.out.println(GameConstants.STARTING_HAND + " cards were dealt to " + p.toString());
-        //     Thread.sleep(GameConstants.TIME_DELAY);
-        // }
-
     }
 
 
@@ -178,7 +141,7 @@ public class GoFish{
     roll a random die. The player with the highest roll
     is the player who starts */
     public static int chooseStartingPlayer(ArrayList<Player> playerlist)
-                throws InterruptedException{
+    throws InterruptedException{
         /* keeps track of the largest roll */
         int max_roll = 0;
         /* keeps track of the player with the largest roll */
@@ -209,5 +172,58 @@ public class GoFish{
 
         assert starting_player != -1;
         return starting_player;
+    }
+
+    /* method to verify and allow the currentPlayer to request a card from another player */
+    public static Player selectPlayer(ArrayList<Player> players, Player currentPlayer){
+        if(currentPlayer instanceof HumanPlayer){
+            /* display players to select from. */
+            /* Only prompts for players starting at computer player 1 */
+            for(int i = 1; i < players.size(); i++){
+                System.out.println(i + ". " + players.get(i));
+            }
+
+            /* prompt user for player selection */
+            System.out.print("Which player would you like to request a card from? ");
+            int request;
+            /* check that selection is valid */
+            while((request = userIn.nextInt()) < 1 || request >= players.size()){
+                System.out.println("That is not a valid choice.");
+                System.out.print("Which player would you like to request a card from? ");
+            }
+            /*flush the input buffer of new line characters */
+            userIn.nextLine();
+
+            return players.get(request);
+        }
+
+        else{
+            /* PLACEHOLDER Edit for computer player behavior. */
+            return players.get(0);
+        }
+    }
+
+    public static Card.Value selectCard(Player currentPlayer){
+        /* if the current player is a human... */
+        if(currentPlayer instanceof HumanPlayer){
+            /* prompt user for card selection based on current hand */
+            System.out.println("Select a card to request\nNOTE: T = 10\n");
+            currentPlayer.displayHand();
+            Card.Value request;
+            String requestString;
+            /* if the input is not a real card or not in the current player's hand
+            then reprompt the player */
+            while((requestString = userIn.nextLine()).equals("") || (request = Card.charToValue(requestString.charAt(0))) == Card.Value.NOTAVALUE || currentPlayer.getCard(request) == null){
+                System.out.println("That is not a valid choice.");
+                System.out.println("Select a card to request\nNOTE: T = 10\n");
+            }
+
+            return request;
+        }
+        /* PLACEHOLDER edit this for the computer player */
+        else{
+            return Card.Value.ACE;
+        }
+
     }
 }

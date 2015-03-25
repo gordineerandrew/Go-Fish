@@ -7,7 +7,7 @@ public class Deck{
     CONSTANTS
     */
     /* number of cards in a deck */
-    final static int DECKSIZE = 52;
+    final static int DECK_SIZE = 52;
     /* total number of suits represented within a deck */
     final static int NUM_SUITS = 4;
     /* total number of values represented within a deck */
@@ -16,7 +16,7 @@ public class Deck{
     final static int SHUFFLE_NUM = 7;
 
     /* underlying datastruct to store the cards in the list */
-    private ArrayList<Card> deck = new ArrayList<Card>(DECKSIZE);
+    private ArrayList<Card> deck = new ArrayList<Card>(DECK_SIZE);
 
     /* keeps track of where the top of the deck is */
     private int deckIndex;
@@ -56,22 +56,26 @@ public class Deck{
 
     /* draws from the deck if there are cards to draw */
     public Card draw(){
-        if(deckIndex == DECKSIZE)
+        if(deckEmpty())
             return null;
         Card c = deck.get(deckIndex++);
         cardsRemaining[c.getValue().ordinal()]--;
         return c;
     }
 
+    public boolean deckEmpty(){
+        return deckIndex == DECK_SIZE;
+    }
+
     /* Used to check the remaining cards in the deck */
     public String toString(){
-        StringBuilder s = new StringBuilder(DECKSIZE - deckIndex);
+        StringBuilder s = new StringBuilder(DECK_SIZE - deckIndex);
         for(int i = 0; i < cardsRemaining.length; i++){
             Card.Value val = Card.intToValue(i+1);
             String valString = Card.valueToString(val);
             s.append("\nThere are " + cardsRemaining[i] + " " + valString + "'s remaining.\n");
         }
-        for(int i = deckIndex; i < DECKSIZE; i++){
+        for(int i = deckIndex; i < DECK_SIZE; i++){
             s.append(deck.get(i) + " ");
         }
         s.append("\n");

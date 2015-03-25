@@ -68,7 +68,7 @@ public abstract class Player{
     */
     public boolean cardRequest(Card.Value val, Player otherPlayer){
         /* prereq assertion */
-        if(val != Card.Value.NOTAVALUE && otherPlayer != null){
+        if(val == Card.Value.NOTAVALUE || otherPlayer == null){
             throw new IllegalArgumentException("Card's value and player must exist");
         }
 
@@ -95,7 +95,10 @@ public abstract class Player{
     public void displayHand(){
         String s = hand.toString();
         System.out.println(s.substring(1,s.length()-1));
-        //System.out.println(hand);
+    }
+
+    public int getHandSize(){
+        return hand.size();
     }
 
     public String toString(){
@@ -104,6 +107,10 @@ public abstract class Player{
 
     public String getName(){
         return name;
+    }
+
+    public boolean handEmpty(){
+        return hand.size() == 0;
     }
 
     public String get(int index){

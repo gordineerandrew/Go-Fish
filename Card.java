@@ -90,6 +90,44 @@ public class Card{
         }
     }
 
+    public static Card.Value charToValue(char value){
+        switch(value){
+            case 'a':
+            case 'A':
+                return Card.Value.ACE;
+            case '2':
+                return Card.Value.TWO;
+            case '3':
+                return Card.Value.THREE;
+            case '4':
+                return Card.Value.FOUR;
+            case '5':
+                return Card.Value.FIVE;
+            case '6':
+                return Card.Value.SIX;
+            case '7':
+                return Card.Value.SEVEN;
+            case '8':
+                return Card.Value.EIGHT;
+            case '9':
+                return Card.Value.NINE;
+            case 't':
+            case 'T':
+                return Card.Value.TEN;
+            case 'j':
+            case 'J':
+                return Card.Value.JACK;
+            case 'q':
+            case 'Q':
+                return Card.Value.QUEEN;
+            case 'k':
+            case 'K':
+                return Card.Value.KING;
+            default:
+                return Card.Value.NOTAVALUE;
+        }
+    }
+
     //Returns the string version of the value of the card.
     public static String valueToString(Value value){
         switch (value){
@@ -112,7 +150,7 @@ public class Card{
             case NINE:
                 return "9";
             case TEN:
-                return "10";
+                return "T";
             case JACK:
                 return "j";
             case QUEEN:
