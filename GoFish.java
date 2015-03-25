@@ -76,6 +76,11 @@ public class GoFish{
         /* deal 7 cards to each players */
         dealCards(all_players);
 
+        /* Prints the deck after cards have been dealt. */
+        if(GameConstants.DEBUG){
+            System.out.println(deck);
+        }
+
         System.out.println("\n");
         /* Display all players information */
         user.displayState();
