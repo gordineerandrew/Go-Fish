@@ -1,7 +1,7 @@
 JC = javac
 JR = java
 RFLAGS = -ea
-GameConstants.Class: GameConstants.java
+GameConstants.class: GameConstants.java
 	$(JC) GameConstants.java
 
 Card.class: Card.java
@@ -25,7 +25,7 @@ HumanPlayer.class: HumanPlayer.java Player.class
 AIPlayer.class: AIPlayer.java Player.class
 	$(JC) AIPlayer.java
 
-GoFish.class: GoFish.java Card.class Deck.class HumanPlayer.class AIPlayer.class GameConstants.class
+GoFish.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class GoFish.java
 	$(JC) GoFish.java
 
 GoFish: GoFish.class
