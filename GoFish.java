@@ -5,12 +5,10 @@ DONE * deal 7 cards to each player
 DONE * auto collect any books.
 DONE * select player to take the first turn at random
 ### Game Loop
-* specify the current players turn
-* choose card to look for
-* choose player to look for card from
-* confirm that match is appropriate
-* if not redo
-* if selected correctly then book is created
+* DONE specify the current players turn
+* STARTED choose card to look for
+* STARTED choose player to look for card from
+* DONE if selected correctly then book is created
 * gets to go another turn
 * else go fish
 * draw card from deck if there are any
@@ -110,18 +108,24 @@ public class GoFish{
             Player currentPlayer = all_players.get(player_index++ % all_players.size());
             System.out.println(currentPlayer + "'s turn.\n");
 
-            Player requestedPlayer = selectPlayer(all_players, currentPlayer);
-            Card.Value requestedCard = selectCard(currentPlayer);
+            boolean turnOver = false;
+            while(!turnOver && !gameOver){
 
-            /* ask the requestedPlayer for the requestedCard */
-            if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
-                /* if they don't have it GO FISH */
-                System.out.println("GO-FISH!");
-                currentPlayer.drawCard();
+                Player requestedPlayer = selectPlayer(all_players, currentPlayer);
+                Card.Value requestedCard = selectCard(currentPlayer);
+
+                /* ask the requestedPlayer for the requestedCard */
+                if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
+                    /* if they don't have it GO FISH */
+                    System.out.println("GO-FISH!");
+                    currentPlayer.drawCard();
+                    System.out.println("TURN OVER");
+                    turnOver = true;
+                }
+
+                /* update the win condition */
+                gameOver = deck.deckEmpty() || currentPlayer.handEmpty() || requestedPlayer.handEmpty();
             }
-
-            /* update the win condition */
-            gameOver = deck.deckEmpty() || currentPlayer.handEmpty() || requestedPlayer.handEmpty();
         }
     }
 
