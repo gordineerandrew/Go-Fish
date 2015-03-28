@@ -31,16 +31,14 @@ public class GoFish{
     public static Scanner userIn = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException, InterruptedException{
-        /*
-        GAME SETUP
-        */
+        /* GAME SETUP */
         /* Prompt user for number of opponents to go against */
         System.out.print("How many opponents (1-3)? ");
         int numOpponents;
         /* while the player inputs a number not between 0 and the max prompt for another number */
         while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
             System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
-            System.out.print("How many opponents (1-" + GameConstants.MAX_OPPONENTS + ")? ");
+            System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
         }
         /*flush the input buffer of new line characters */
         userIn.nextLine();
@@ -51,14 +49,14 @@ public class GoFish{
 
         /* list of all players
         room for all of the opponents and the human player*/
-        ArrayList<Player> all_players = new ArrayList<Player>(numOpponents+1);
+        ArrayList<Player> allPlayers = new ArrayList<Player>(numOpponents+1);
 
         /* generate human player */
         HumanPlayer user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
         /* update the longest name width when another player is created */
         GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
         /* add to all player list to keep track of user */
-        all_players.add(user);
+        allPlayers.add(user);
 
         /* generate opponents */
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
@@ -69,11 +67,11 @@ public class GoFish{
             /* add to both opplist and alllist so
             that the new opponent can be kept track of */
             opponents.add(opp);
-            all_players.add(opp);
+            allPlayers.add(opp);
         }
 
         /* deal 7 cards to each players */
-        dealCards(all_players);
+        dealCards(allPlayers);
 
         /* Prints the deck after cards have been dealt. */
         if(GameConstants.DEBUG){
@@ -92,26 +90,25 @@ public class GoFish{
 
         /* choose player to begin game */
         /* currentPlayer stores the index of the player in the alllist */
-        int player_index = chooseStartingPlayer(all_players);
-        System.out.printf("%s will begin the game\n", all_players.get(player_index));
+        int player_index = chooseStartingPlayer(allPlayers);
+        System.out.printf("%s will begin the game\n", allPlayers.get(player_index));
         System.out.println("Press ENTER to let the game begin");
         System.in.read();
 
-        /* GAME LOOP
-        */
+        /* GAME LOOP */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
 
         while(!gameOver){
 
             /* select the current player to start their turn */
-            Player currentPlayer = all_players.get(player_index++ % all_players.size());
+            Player currentPlayer = allPlayers.get(player_index++ % allPlayers.size());
             System.out.println(currentPlayer + "'s turn.\n");
 
             boolean turnOver = false;
             while(!turnOver && !gameOver){
 
-                Player requestedPlayer = selectPlayer(all_players, currentPlayer);
+                Player requestedPlayer = selectPlayer(allPlayers, currentPlayer);
                 Card.Value requestedCard = selectCard(currentPlayer);
 
                 /* ask the requestedPlayer for the requestedCard */
@@ -124,9 +121,12 @@ public class GoFish{
                 }
 
                 /* update the win condition */
-                gameOver = deck.deckEmpty() || currentPlayer.handEmpty() || requestedPlayer.handEmpty();
+                gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
             }
         }
+
+
+        determineWinner(allPlayers, user);
     }
 
     /* static routine that deals cards out to each player
@@ -229,5 +229,54 @@ public class GoFish{
             return Card.Value.ACE;
         }
 
+    }
+
+    public static boolean isGameOver(boolean emptyDeck, Player current, Player other){
+        boolean gameOver = false;
+        if(emptyDeck){
+            System.out.println("Deck is empty!");
+            gameOver = true;
+        }
+        else if(current.handEmpty()){
+            System.out.printf("%s's hand is empty!\n", current.getName());
+            gameOver = true;
+        }
+        else if(other.handEmpty()){
+            System.out.printf("%s's hand is empty!\n", other.getName());
+            gameOver = true;
+        }
+
+        if(gameOver)
+            System.out.println("GAME OVER!");
+
+        return gameOver;
+    }
+
+    public static void determineWinner(ArrayList<Player> players, HumanPlayer hPlayer){
+        Player winner = null;
+        int maxScore = 0;
+
+        /* find the player with the max score */
+        for(Player p: players){
+            int pScore = p.getScore();
+            if(pScore > maxScore){
+                maxScore = pScore;
+                winner = p;
+            }
+
+            /* if there is a tie break it */
+            else if(pScore == maxScore){
+                if(winner != null)
+                    winner = p.handEmpty() ? p : winner;
+                else
+                    winner = p;
+            }
+        }
+
+        /* display the winner */
+        System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
+        /* print the human player's outcome message */
+        String outcome = winner == hPlayer ? "Congrats" : "Better luck next time";
+        System.out.printf("%s %s\n", outcome, hPlayer.getName());
     }
 }

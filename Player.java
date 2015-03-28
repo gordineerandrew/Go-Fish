@@ -20,6 +20,15 @@ public abstract class Player{
 
     }
 
+    /* access functions */
+    public String getName(){
+        return name;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
     public Card drawCard(){
         Card newCard = deckRef.draw();
         /* if there are cards left in the deck... */
@@ -101,16 +110,12 @@ public abstract class Player{
         return hand.size();
     }
 
-    public String toString(){
-        return getName();
-    }
-
-    public String getName(){
-        return name;
-    }
-
     public boolean handEmpty(){
         return hand.size() == 0;
+    }
+
+    public String toString(){
+        return getName();
     }
 
     public void displayState(){
