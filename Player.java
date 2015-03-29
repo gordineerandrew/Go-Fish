@@ -29,6 +29,10 @@ public abstract class Player{
         return score;
     }
 
+    private void collectBook(Card.Value value){
+        books[value.ordinal()]++;
+        score++;
+    }
     public Card drawCard(){
         Card newCard = deckRef.draw();
         /* if there are cards left in the deck... */
@@ -40,8 +44,7 @@ public abstract class Player{
             after removing the old card */
             Card cardInHand = this.getCard(newValue);
             if(cardInHand != null){
-                score++;
-                books[newValue.ordinal()]++;
+                collectBook(newValue);
                 hand.remove(cardInHand);
             }
 
@@ -90,9 +93,7 @@ public abstract class Player{
             Card playerCard = this.getCard(val);
             this.hand.remove(playerCard);
             /* add book to this player's set of books */
-            books[requestedCard.getValue().ordinal()]++;
-            /* update the score */
-            score++;
+            collectBook(requestedCard.getValue());
             /* return that the requested card was found */
             return true;
         }
@@ -122,6 +123,14 @@ public abstract class Player{
         String s = hand.toString();
         s = s.substring(1,s.length()-1);
         System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, s);
+    }
+
+    public void beginTurn(){
+        System.out.println(name + "'s turn.");
+        System.out.println("Score: " + score);
+    }
+    public void endTurn(){
+        System.out.println(name + "'s score: " + score);
     }
 
 }

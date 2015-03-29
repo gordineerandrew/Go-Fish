@@ -73,7 +73,7 @@ public class Deck{
         for(int i = 0; i < cardsRemaining.length; i++){
             Card.Value val = Card.intToValue(i+1);
             String valString = Card.valueToString(val);
-            s.append("\nThere are " + cardsRemaining[i] + " " + valString + "'s remaining.\n");
+            s.append("There are " + cardsRemaining[i] + " " + valString + "'s remaining.\n");
         }
         for(int i = deckIndex; i < DECK_SIZE; i++){
             s.append(deck.get(i) + " ");

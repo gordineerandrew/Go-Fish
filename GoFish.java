@@ -100,28 +100,44 @@ public class GoFish{
         boolean gameOver = false;
 
         while(!gameOver){
-
-            /* select the current player to start their turn */
+            Thread.sleep(GameConstants.TIME_DELAY);
+            /* BEGINNING PHASE */
             Player currentPlayer = allPlayers.get(player_index++ % allPlayers.size());
-            System.out.println(currentPlayer + "'s turn.\n");
-
+            currentPlayer.beginTurn();
+            System.out.println();
             boolean turnOver = false;
             while(!turnOver && !gameOver){
+                /* SELECTION PHASE */
 
                 Player requestedPlayer = selectPlayer(allPlayers, currentPlayer);
                 Card.Value requestedCard = selectCard(currentPlayer);
+                System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
 
                 /* ask the requestedPlayer for the requestedCard */
                 if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
                     /* if they don't have it GO FISH */
-                    System.out.println("GO-FISH!");
-                    currentPlayer.drawCard();
+                    int oldScore = currentPlayer.getScore();
+                    System.out.println("\nGO-FISH!");
+                    Card newCard = currentPlayer.drawCard();
+                    if(oldScore != currentPlayer.getScore()){
+                        System.out.println(currentPlayer + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
+                    }
                     System.out.println("TURN OVER");
                     turnOver = true;
                 }
-
+                else{
+                    System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
+                    System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
+                }
+                System.out.println();
+                Thread.sleep(GameConstants.TIME_DELAY);
+                /* END PHASE */
+                currentPlayer.endTurn();
+                System.out.println();
                 /* update the win condition */
                 gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
+                System.out.print("Press enter to continue the game.");
+                System.in.read();
             }
         }
 
@@ -197,12 +213,13 @@ public class GoFish{
             }
             /*flush the input buffer of new line characters */
             userIn.nextLine();
-
+            System.out.println();
             return players.get(request);
         }
 
         else{
             /* PLACEHOLDER Edit for computer player behavior. */
+            System.out.println();
             return players.get(0);
         }
     }
@@ -211,21 +228,25 @@ public class GoFish{
         /* if the current player is a human... */
         if(currentPlayer instanceof HumanPlayer){
             /* prompt user for card selection based on current hand */
-            System.out.println("Select a card to request\nNOTE: T = 10\n");
+            System.out.print("Current hand: ");
             currentPlayer.displayHand();
+            System.out.print("NOTE: T = 10\nSelect a card to request. ");
             Card.Value request;
             String requestString;
             /* if the input is not a real card or not in the current player's hand
             then reprompt the player */
             while((requestString = userIn.nextLine()).equals("") || (request = Card.charToValue(requestString.charAt(0))) == Card.Value.NOTAVALUE || currentPlayer.getCard(request) == null){
                 System.out.println("That is not a valid choice.");
-                System.out.println("Select a card to request\nNOTE: T = 10\n");
+                System.out.print("Current hand: ");
+                currentPlayer.displayHand();
+                System.out.print("NOTE: T = 10\nSelect a card to request. ");
             }
-
+            System.out.println();
             return request;
         }
         /* PLACEHOLDER edit this for the computer player */
         else{
+            System.out.println();
             return Card.Value.ACE;
         }
 

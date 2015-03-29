@@ -9,4 +9,13 @@ public class HumanPlayer extends Player{
         }
         return c;
     }
+
+    public void beginTurn(){
+        super.beginTurn();
+        displayHand();
+    }
+    public void endTurn(){
+        super.endTurn();
+        displayHand();
+    }
 }
