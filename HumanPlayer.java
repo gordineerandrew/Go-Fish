@@ -12,10 +12,12 @@ public class HumanPlayer extends Player{
 
     public void beginTurn(){
         super.beginTurn();
+        System.out.print("Current hand: ");
         displayHand();
     }
     public void endTurn(){
         super.endTurn();
+        System.out.print("Current hand: ");
         displayHand();
     }
 }

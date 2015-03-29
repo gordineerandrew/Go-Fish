@@ -99,16 +99,16 @@ public class GoFish{
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
 
+        clearScreen();
         while(!gameOver){
             Thread.sleep(GameConstants.TIME_DELAY);
             /* BEGINNING PHASE */
             Player currentPlayer = allPlayers.get(player_index++ % allPlayers.size());
-            currentPlayer.beginTurn();
-            System.out.println();
             boolean turnOver = false;
             while(!turnOver && !gameOver){
                 /* SELECTION PHASE */
-
+                currentPlayer.beginTurn();
+                System.out.println();
                 Player requestedPlayer = selectPlayer(allPlayers, currentPlayer);
                 Card.Value requestedCard = selectCard(currentPlayer);
                 System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
@@ -132,12 +132,11 @@ public class GoFish{
                 System.out.println();
                 Thread.sleep(GameConstants.TIME_DELAY);
                 /* END PHASE */
-                currentPlayer.endTurn();
-                System.out.println();
                 /* update the win condition */
                 gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
                 System.out.print("Press enter to continue the game.");
                 System.in.read();
+                clearScreen();
             }
         }
 
@@ -197,19 +196,23 @@ public class GoFish{
     /* method to verify and allow the currentPlayer to request a card from another player */
     public static Player selectPlayer(ArrayList<Player> players, Player currentPlayer){
         if(currentPlayer instanceof HumanPlayer){
+            /* prompt user for player selection */
+            System.out.println("Which player would you like to request a card from? ");
             /* display players to select from. */
             /* Only prompts for players starting at computer player 1 */
             for(int i = 1; i < players.size(); i++){
                 System.out.println(i + ". " + players.get(i));
             }
-
-            /* prompt user for player selection */
-            System.out.print("Which player would you like to request a card from? ");
             int request;
             /* check that selection is valid */
+            System.out.print("Selection: ");
             while((request = userIn.nextInt()) < 1 || request >= players.size()){
                 System.out.println("That is not a valid choice.");
                 System.out.print("Which player would you like to request a card from? ");
+                for(int i = 1; i < players.size(); i++){
+                    System.out.println(i + ". " + players.get(i));
+                }
+                System.out.print("Selection: ");
             }
             /*flush the input buffer of new line characters */
             userIn.nextLine();
@@ -219,7 +222,6 @@ public class GoFish{
 
         else{
             /* PLACEHOLDER Edit for computer player behavior. */
-            System.out.println();
             return players.get(0);
         }
     }
@@ -230,7 +232,7 @@ public class GoFish{
             /* prompt user for card selection based on current hand */
             System.out.print("Current hand: ");
             currentPlayer.displayHand();
-            System.out.print("NOTE: T = 10\nSelect a card to request. ");
+            System.out.print("NOTE: T = 10\nSelect a card to request: ");
             Card.Value request;
             String requestString;
             /* if the input is not a real card or not in the current player's hand
@@ -239,14 +241,13 @@ public class GoFish{
                 System.out.println("That is not a valid choice.");
                 System.out.print("Current hand: ");
                 currentPlayer.displayHand();
-                System.out.print("NOTE: T = 10\nSelect a card to request. ");
+                System.out.print("NOTE: T = 10\nSelect a card to request: ");
             }
             System.out.println();
             return request;
         }
         /* PLACEHOLDER edit this for the computer player */
         else{
-            System.out.println();
             return Card.Value.ACE;
         }
 
@@ -299,5 +300,10 @@ public class GoFish{
         /* print the human player's outcome message */
         String outcome = winner == hPlayer ? "Congrats" : "Better luck next time";
         System.out.printf("%s %s\n", outcome, hPlayer.getName());
+    }
+    public static void clearScreen(){
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
 }
