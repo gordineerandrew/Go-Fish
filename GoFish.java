@@ -92,20 +92,20 @@ public class GoFish{
         /* currentPlayer stores the index of the player in the alllist */
         int player_index = chooseStartingPlayer(allPlayers);
         System.out.printf("%s will begin the game\n", allPlayers.get(player_index));
-        System.out.println("Press ENTER to let the game begin");
-        System.in.read();
 
         /* GAME LOOP */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
-
-        clearScreen();
+        
         while(!gameOver){
             Thread.sleep(GameConstants.TIME_DELAY);
             /* BEGINNING PHASE */
             Player currentPlayer = allPlayers.get(player_index++ % allPlayers.size());
             boolean turnOver = false;
             while(!turnOver && !gameOver){
+                System.out.print("Press enter to continue the game.");
+                System.in.read();
+                clearScreen();
                 /* SELECTION PHASE */
                 currentPlayer.beginTurn();
                 System.out.println();
@@ -134,9 +134,6 @@ public class GoFish{
                 /* END PHASE */
                 /* update the win condition */
                 gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
-                System.out.print("Press enter to continue the game.");
-                System.in.read();
-                clearScreen();
             }
         }
 
@@ -221,8 +218,12 @@ public class GoFish{
         }
 
         else{
-            /* PLACEHOLDER Edit for computer player behavior. */
-            return players.get(0);
+            /* PLACEHOLDER AI Selects random player */
+            Random r = new Random();
+            Player playerChoice;
+            while((playerChoice = players.get(r.nextInt(players.size()))) == currentPlayer){}
+
+            return playerChoice;
         }
     }
 
@@ -248,7 +249,11 @@ public class GoFish{
         }
         /* PLACEHOLDER edit this for the computer player */
         else{
-            return Card.Value.ACE;
+            /* PLACEHOLDER AI Selects a random card */
+            Random r = new Random();
+            Card cardChoice;
+            while((cardChoice = currentPlayer.getCard(Card.intToValue(r.nextInt(13) + 1))) == null){}
+            return cardChoice.getValue();
         }
 
     }
