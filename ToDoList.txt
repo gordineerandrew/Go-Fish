@@ -12,3 +12,16 @@ TO DO:
     Display Tweaks (To make more readable... Space between lines and adding a
             huge amount of whitespace after a turn to avoid clutter)
     *Optional* Add a name option for the human player
+
+
+    Probabilities
+        "Density of card" times number of cards in hand (or deck) = that players
+                respective probability of having a selected card.
+        Asking for a card == pr(card asked) = 1
+                If made book, pr(card asked) = 0
+        if denied having card, pr(card asked for) = 0
+                if had card, pr(card asked for) = 0
+        When a player asks for card, or a player denies card,
+                the probabilities for THAT card is updated. Also, drawing cards
+                from deck are counted as a "new" hand for the purposes of
+                calculating probability.
