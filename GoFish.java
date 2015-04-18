@@ -30,6 +30,9 @@ public class GoFish{
     /* initialize a scanner to get user input throughout the game */
     public static Scanner userIn = new Scanner(System.in);
 
+    /* Global playerlist */
+    private static ArrayList<Player> allPlayers;
+
     public static void main(String[] args) throws IOException, InterruptedException{
         /* GAME SETUP */
         /* Prompt user for number of opponents to go against */
@@ -49,7 +52,7 @@ public class GoFish{
 
         /* list of all players
         room for all of the opponents and the human player*/
-        ArrayList<Player> allPlayers = new ArrayList<Player>(numOpponents+1);
+        allPlayers = new ArrayList<Player>(numOpponents+1);
 
         /* generate human player */
         HumanPlayer user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
@@ -71,7 +74,7 @@ public class GoFish{
         }
 
         /* deal 7 cards to each players */
-        dealCards(allPlayers);
+        dealCards();
 
         /* Prints the deck after cards have been dealt. */
         if(GameConstants.DEBUG){
@@ -90,13 +93,13 @@ public class GoFish{
 
         /* choose player to begin game */
         /* currentPlayer stores the index of the player in the alllist */
-        int player_index = chooseStartingPlayer(allPlayers);
+        int player_index = chooseStartingPlayer();
         System.out.printf("%s will begin the game\n", allPlayers.get(player_index));
 
         /* GAME LOOP */
         /* boolean to end game when no deck and no hands remain */
         boolean gameOver = false;
-        
+
         while(!gameOver){
             Thread.sleep(GameConstants.TIME_DELAY);
             /* BEGINNING PHASE */
@@ -109,7 +112,7 @@ public class GoFish{
                 /* SELECTION PHASE */
                 currentPlayer.beginTurn();
                 System.out.println();
-                Player requestedPlayer = selectPlayer(allPlayers, currentPlayer);
+                Player requestedPlayer = selectPlayer(currentPlayer);
                 Card.Value requestedCard = selectCard(currentPlayer);
                 System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
 
@@ -138,13 +141,13 @@ public class GoFish{
         }
 
 
-        determineWinner(allPlayers, user);
+        determineWinner(user);
     }
 
     /* static routine that deals cards out to each player
     at the beginning of each game */
-    public static void dealCards(ArrayList<Player> players)throws InterruptedException{
-        for(Player p: players){
+    public static void dealCards()throws InterruptedException{
+        for(Player p: allPlayers){
             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
                 p.drawCard();
             }
@@ -156,8 +159,7 @@ public class GoFish{
     /* chooses the starting player by having each player
     roll a random die. The player with the highest roll
     is the player who starts */
-    public static int chooseStartingPlayer(ArrayList<Player> playerlist)
-    throws InterruptedException{
+    public static int chooseStartingPlayer() throws InterruptedException{
         /* keeps track of the largest roll */
         int max_roll = 0;
         /* keeps track of the player with the largest roll */
@@ -168,7 +170,7 @@ public class GoFish{
         System.out.println("\n\nRolling 20 sided dice to decide starting player...");
         /* each player will roll a dice
         the player with the highest dice roll will go first */
-        for(int i = 0; i < playerlist.size(); i++){
+        for(int i = 0; i < allPlayers.size(); i++){
             /* wait for a second to give player time to read info */
             Thread.sleep(GameConstants.TIME_DELAY);
 
@@ -181,7 +183,7 @@ public class GoFish{
 
             /* display the player's roll */
             /* use the longest player's name + 13 characters for the " rolled a..." */
-            System.out.printf("%-"+(GameConstants.LONGEST_NAME_WIDTH+13)+"s %d\n",playerlist.get(i).getName()+" rolled a...", players_roll);
+            System.out.printf("%-"+(GameConstants.LONGEST_NAME_WIDTH+13)+"s %d\n",allPlayers.get(i).getName()+" rolled a...", players_roll);
         }
 
         Thread.sleep(GameConstants.TIME_DELAY);
@@ -191,37 +193,37 @@ public class GoFish{
     }
 
     /* method to verify and allow the currentPlayer to request a card from another player */
-    public static Player selectPlayer(ArrayList<Player> players, Player currentPlayer){
+    public static Player selectPlayer(Player currentPlayer){
         if(currentPlayer instanceof HumanPlayer){
             /* prompt user for player selection */
             System.out.println("Which player would you like to request a card from? ");
             /* display players to select from. */
             /* Only prompts for players starting at computer player 1 */
-            for(int i = 1; i < players.size(); i++){
-                System.out.println(i + ". " + players.get(i));
+            for(int i = 1; i < allPlayers.size(); i++){
+                System.out.println(i + ". " + allPlayers.get(i));
             }
             int request;
             /* check that selection is valid */
             System.out.print("Selection: ");
-            while((request = userIn.nextInt()) < 1 || request >= players.size()){
+            while((request = userIn.nextInt()) < 1 || request >= allPlayers.size()){
                 System.out.println("That is not a valid choice.");
                 System.out.print("Which player would you like to request a card from? ");
-                for(int i = 1; i < players.size(); i++){
-                    System.out.println(i + ". " + players.get(i));
+                for(int i = 1; i < allPlayers.size(); i++){
+                    System.out.println(i + ". " + allPlayers.get(i));
                 }
                 System.out.print("Selection: ");
             }
             /*flush the input buffer of new line characters */
             userIn.nextLine();
             System.out.println();
-            return players.get(request);
+            return allPlayers.get(request);
         }
 
         else{
             /* PLACEHOLDER AI Selects random player */
             Random r = new Random();
             Player playerChoice;
-            while((playerChoice = players.get(r.nextInt(players.size()))) == currentPlayer){}
+            while((playerChoice = allPlayers.get(r.nextInt(allPlayers.size()))) == currentPlayer){}
 
             return playerChoice;
         }
@@ -279,12 +281,12 @@ public class GoFish{
         return gameOver;
     }
 
-    public static void determineWinner(ArrayList<Player> players, HumanPlayer hPlayer){
+    public static void determineWinner(HumanPlayer hPlayer){
         Player winner = null;
         int maxScore = 0;
 
         /* find the player with the max score */
-        for(Player p: players){
+        for(Player p: allPlayers){
             int pScore = p.getScore();
             if(pScore > maxScore){
                 maxScore = pScore;
@@ -306,6 +308,7 @@ public class GoFish{
         String outcome = winner == hPlayer ? "Congrats" : "Better luck next time";
         System.out.printf("%s %s\n", outcome, hPlayer.getName());
     }
+
     public static void clearScreen(){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
