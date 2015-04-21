@@ -29,10 +29,15 @@ public abstract class Player{
         return score;
     }
 
-    private void collectBook(Card.Value value){
+    private void collectBook(Card.Value value, boolean drewCard){
         books[value.ordinal()]++;
         score++;
+        if(GoFish.initState)
+            GoFish.initialAlertBook(this, value, drewCard);
+        else
+            GoFish.alertBook(this, value, drewCard);
     }
+
     public Card drawCard(){
         Card newCard = deckRef.draw();
         /* if there are cards left in the deck... */
@@ -44,7 +49,7 @@ public abstract class Player{
             after removing the old card */
             Card cardInHand = this.getCard(newValue);
             if(cardInHand != null){
-                collectBook(newValue);
+                collectBook(newValue, true);
                 hand.remove(cardInHand);
             }
 
@@ -52,6 +57,9 @@ public abstract class Player{
             else{
                 hand.add(newCard);
             }
+
+            /* incrememnt probabilities across board by 1 */
+            GoFish.incrementProbabilities(this);
         }
         /* else don't draw */
 
@@ -93,7 +101,7 @@ public abstract class Player{
             Card playerCard = this.getCard(val);
             this.hand.remove(playerCard);
             /* add book to this player's set of books */
-            collectBook(requestedCard.getValue());
+            collectBook(requestedCard.getValue(), false);
             /* return that the requested card was found */
             return true;
         }

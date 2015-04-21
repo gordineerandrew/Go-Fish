@@ -24,72 +24,36 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GoFish{
 
     /* initialize a scanner to get user input throughout the game */
     public static Scanner userIn = new Scanner(System.in);
 
+    /* game state; true if initialize game, false otherwise*/
+    public static boolean initState;
+
     /* Global playerlist */
     private static ArrayList<Player> allPlayers;
 
+    /* Global map for probabilities */
+    private static Map<Player, ArrayList<Integer>> probabilityInfoMap;
+
+    /* Global Deck for Game */
+    private static Deck deck;
+
+    /* Global User Player */
+    private static HumanPlayer user;
+
+    /* Global pool of cards still in play */
+    int[] available;
+
     public static void main(String[] args) throws IOException, InterruptedException{
-        /* GAME SETUP */
-        /* Prompt user for number of opponents to go against */
-        System.out.print("How many opponents (1-3)? ");
-        int numOpponents;
-        /* while the player inputs a number not between 0 and the max prompt for another number */
-        while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
-            System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
-            System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
-        }
-        /*flush the input buffer of new line characters */
-        userIn.nextLine();
-
-        System.out.println();
-        /* create the deck */
-        Deck deck = new Deck();
-
-        /* list of all players
-        room for all of the opponents and the human player*/
-        allPlayers = new ArrayList<Player>(numOpponents+1);
-
-        /* generate human player */
-        HumanPlayer user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
-        /* update the longest name width when another player is created */
-        GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
-        /* add to all player list to keep track of user */
-        allPlayers.add(user);
-
-        /* generate opponents */
-        ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
-        for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
-            GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, opp.getName().length());
-
-            /* add to both opplist and alllist so
-            that the new opponent can be kept track of */
-            opponents.add(opp);
-            allPlayers.add(opp);
-        }
-
-        /* deal 7 cards to each players */
-        dealCards();
-
-        /* Prints the deck after cards have been dealt. */
-        if(GameConstants.DEBUG){
-            System.out.println(deck);
-        }
-
-        System.out.println("\n");
-        /* Display all players information */
-        user.displayState();
-        if(GameConstants.DEBUG){
-            for(int i = 0; i < numOpponents; i++){
-                AIPlayer opp = opponents.get(i);
-                opp.displayState();
-            }
-        }
+        
+        /* initialize beginning game state */
+        initGame();
 
         /* choose player to begin game */
         /* currentPlayer stores the index of the player in the alllist */
@@ -118,21 +82,18 @@ public class GoFish{
 
                 /* ask the requestedPlayer for the requestedCard */
                 if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
-                    /* if they don't have it GO FISH */
-                    int oldScore = currentPlayer.getScore();
-                    System.out.println("\nGO-FISH!");
-                    Card newCard = currentPlayer.drawCard();
-                    if(oldScore != currentPlayer.getScore()){
-                        System.out.println(currentPlayer + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
-                    }
-                    System.out.println("TURN OVER");
-                    turnOver = true;
+                    alertGoFish(requestedPlayer, requestedCard);
+                    goFish(currentPlayer);
+                    System.out.println();
                 }
                 else{
-                    System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
-                    System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
+                    /* let players know that this player has made a book of this card */
+                    alertBook(currentPlayer, requestedPlayer, requestedCard);
+                    /* update the player who gave away the card as well */
+                    decrementAndZero(requestedPlayer, requestedCard);
+                    System.out.println();
                 }
-                System.out.println();
+                
                 Thread.sleep(GameConstants.TIME_DELAY);
                 /* END PHASE */
                 /* update the win condition */
@@ -141,12 +102,97 @@ public class GoFish{
         }
 
 
-        determineWinner(user);
+        determineWinner();
+    }
+
+    public static void initGame() throws InterruptedException{
+        initState = true;
+
+        /* Prompt user for number of opponents to go against */
+        System.out.print("How many opponents (1-3)? ");
+        int numOpponents;
+        /* while the player inputs a number not between 0 and the max prompt for another number */
+        while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
+            System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
+            System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
+        }
+        /*flush the input buffer of new line characters */
+        userIn.nextLine();
+
+        System.out.println();
+
+        /* create the deck */
+        deck = new Deck();
+
+        /* initialize available */
+        available = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+
+        /* list of all players
+        room for all of the opponents and the human player*/
+        allPlayers = new ArrayList<Player>(numOpponents+1);
+
+        /* generate human player */
+        user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
+        /* update the longest name width when another player is created */
+        GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
+        /* add to all player list to keep track of user */
+        allPlayers.add(user);
+
+        /* generate opponents */
+        ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
+        for(int i = 0; i < numOpponents; i++){
+            AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
+            GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, opp.getName().length());
+
+            /* add to both opplist and alllist so
+            that the new opponent can be kept track of */
+            opponents.add(opp);
+            allPlayers.add(opp);
+        }
+
+        /* initialize the probability map */
+        initProbMap();
+
+        /* deal 7 cards to each players */
+        dealCards();
+
+        /* Prints the deck after cards have been dealt. */
+        if(GameConstants.DEBUG){
+            System.out.println(deck);
+        }
+
+        System.out.println("\n");
+        /* Display all players information */
+        user.displayState();
+        if(GameConstants.DEBUG){
+            for(int i = 0; i < numOpponents; i++){
+                AIPlayer opp = opponents.get(i);
+                opp.displayState();
+            }
+        }
+
+        initState = false;
+    }
+
+    public static void initProbMap(){
+        /* create an entry in the probability map for each player */
+        probabilityInfoMap = new HashMap<Player, ArrayList<Integer>>(allPlayers.size());
+
+        /* default each entry to have 0 because cards have not been dealt yet */
+        for(Player p : allPlayers){
+            ArrayList<Integer> probabilityChart = new ArrayList<Integer>(Deck.NUM_VALUES);
+            for(int i = 0; i < Deck.NUM_VALUES; i++){
+                probabilityChart.set(i, 0);
+            }
+
+            probabilityInfoMap.put(p, probabilityChart);
+        }
+
     }
 
     /* static routine that deals cards out to each player
     at the beginning of each game */
-    public static void dealCards()throws InterruptedException{
+    public static void dealCards() throws InterruptedException{
         for(Player p: allPlayers){
             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
                 p.drawCard();
@@ -260,6 +306,76 @@ public class GoFish{
 
     }
 
+    public static void initialAlertBook(Player p, Card.Value value, boolean drewCard){
+        /* decrement available pool of cards */
+        available[value.ordinal()]-=2;
+        decrementProbabilities(p);
+        if(drewCard){
+            decrementProbabilities(p);
+        }
+    }
+
+    public static void alertBook(Player p, Card.Value value, boolean drewCard){
+        /* decrement available pool of cards */
+        available[value.ordinal()]-=2;
+        /* zero out player for the given value*/
+        decrementAndZero(p, value);
+        if(drewCard){
+            decrementProbabilities(p);
+            probabilityInfoMap.get(p).set(value.ordinal(), 0);
+        }
+
+        /* display */
+        System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
+        System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
+    }
+
+    /*
+    initialize map to all zeros
+    decremeent inside of initialAlertBook
+    increment inside of drawCard
+    */
+
+    public static void goFish(Player p){
+        /* if they don't have it GO FISH */
+        int oldScore = p.getScore();
+        System.out.println("\nGO-FISH!");
+        Card newCard = p.drawCard();
+        if(oldScore != p.getScore()){
+            System.out.println(p + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
+        }
+        System.out.println("TURN OVER");
+        turnOver = true;
+        printf("need to update probability map to say none of this card are in this players hand\n");
+    }
+
+    public static void alertGoFish(Player r, Card.Value value){
+        probabilityInfoMap.get(r).set(value.ordinal(), 0)
+    }
+
+    public static incrementProbabilities(Player p){
+        ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
+        for(int i = 0; i < probabilityMap.size(); i++){
+            probabilityChart.set(i, probabilityChart.get(i)+1);
+            if(probabilityChart.get(i) < 0){
+                probabilityChart.set(i, 1);
+            }
+        }
+    }
+
+    public static decrementProbabilities(Player p){
+        ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
+        for(int i = 0; i < probabilityMap.size(); i++){
+            probabilityChart.set(probabilityChart.get(i)-1);
+        }
+    }
+
+    public static decrementAndZero(Player p, Card.Value value){
+        decrementProbabilities(p);
+        /* zero out the card's value */
+        probabilityInfoMap.get(p).set(value.ordinal(), 0);
+    }
+
     public static boolean isGameOver(boolean emptyDeck, Player current, Player other){
         boolean gameOver = false;
         if(emptyDeck){
@@ -281,7 +397,7 @@ public class GoFish{
         return gameOver;
     }
 
-    public static void determineWinner(HumanPlayer hPlayer){
+    public static void determineWinner(){
         Player winner = null;
         int maxScore = 0;
 
@@ -305,8 +421,8 @@ public class GoFish{
         /* display the winner */
         System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
         /* print the human player's outcome message */
-        String outcome = winner == hPlayer ? "Congrats" : "Better luck next time";
-        System.out.printf("%s %s\n", outcome, hPlayer.getName());
+        String outcome = winner == user ? "Congrats" : "Better luck next time";
+        System.out.printf("%s %s\n", outcome, user.getName());
     }
 
     public static void clearScreen(){
