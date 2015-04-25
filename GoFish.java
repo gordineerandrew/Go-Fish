@@ -48,7 +48,7 @@ public class GoFish{
     private static HumanPlayer user;
 
     /* Global pool of cards still in play */
-    int[] available;
+    private static int[] available;
 
     public static void main(String[] args) throws IOException, InterruptedException{
         
@@ -84,11 +84,15 @@ public class GoFish{
                 if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
                     alertGoFish(requestedPlayer, requestedCard);
                     goFish(currentPlayer);
+                    turnOver = true;
                     System.out.println();
                 }
                 else{
                     /* let players know that this player has made a book of this card */
-                    alertBook(currentPlayer, requestedPlayer, requestedCard);
+                    alertBook(currentPlayer, requestedCard, false);
+                    /* display */
+                    System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
+                    System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
                     /* update the player who gave away the card as well */
                     decrementAndZero(requestedPlayer, requestedCard);
                     System.out.println();
@@ -125,7 +129,7 @@ public class GoFish{
         deck = new Deck();
 
         /* initialize available */
-        available = {4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+        available = new int[]{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
 
         /* list of all players
         room for all of the opponents and the human player*/
@@ -325,9 +329,6 @@ public class GoFish{
             probabilityInfoMap.get(p).set(value.ordinal(), 0);
         }
 
-        /* display */
-        System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
-        System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
     }
 
     /*
@@ -345,17 +346,15 @@ public class GoFish{
             System.out.println(p + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
         }
         System.out.println("TURN OVER");
-        turnOver = true;
-        printf("need to update probability map to say none of this card are in this players hand\n");
     }
 
     public static void alertGoFish(Player r, Card.Value value){
-        probabilityInfoMap.get(r).set(value.ordinal(), 0)
+        probabilityInfoMap.get(r).set(value.ordinal(), 0);
     }
 
-    public static incrementProbabilities(Player p){
+    public static void incrementProbabilities(Player p){
         ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
-        for(int i = 0; i < probabilityMap.size(); i++){
+        for(int i = 0; i < probabilityChart.size(); i++){
             probabilityChart.set(i, probabilityChart.get(i)+1);
             if(probabilityChart.get(i) < 0){
                 probabilityChart.set(i, 1);
@@ -363,14 +362,14 @@ public class GoFish{
         }
     }
 
-    public static decrementProbabilities(Player p){
+    public static void decrementProbabilities(Player p){
         ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
-        for(int i = 0; i < probabilityMap.size(); i++){
-            probabilityChart.set(probabilityChart.get(i)-1);
+        for(int i = 0; i < probabilityChart.size(); i++){
+            probabilityChart.set(i, probabilityChart.get(i)-1);
         }
     }
 
-    public static decrementAndZero(Player p, Card.Value value){
+    public static void decrementAndZero(Player p, Card.Value value){
         decrementProbabilities(p);
         /* zero out the card's value */
         probabilityInfoMap.get(p).set(value.ordinal(), 0);
