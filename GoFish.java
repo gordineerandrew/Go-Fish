@@ -186,7 +186,7 @@ public class GoFish{
         for(Player p : allPlayers){
             ArrayList<Integer> probabilityChart = new ArrayList<Integer>(Deck.NUM_VALUES);
             for(int i = 0; i < Deck.NUM_VALUES; i++){
-                probabilityChart.set(i, 0);
+                probabilityChart.add(0);
             }
 
             probabilityInfoMap.put(p, probabilityChart);
