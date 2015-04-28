@@ -51,7 +51,7 @@ public class GoFish{
     private static int[] available;
 
     public static void main(String[] args) throws IOException, InterruptedException{
-        
+
         /* initialize beginning game state */
         initGame();
 
@@ -97,7 +97,7 @@ public class GoFish{
                     decrementAndZero(requestedPlayer, requestedCard);
                     System.out.println();
                 }
-                
+
                 Thread.sleep(GameConstants.TIME_DELAY);
                 /* END PHASE */
                 /* update the win condition */
@@ -422,6 +422,38 @@ public class GoFish{
         /* print the human player's outcome message */
         String outcome = winner == user ? "Congrats" : "Better luck next time";
         System.out.printf("%s %s\n", outcome, user.getName());
+    }
+
+    public static void getProbabilities(){
+        /* Starting at 1 to not include the human player */
+        for(int i = 1; i < allPlayers.size(); i++){
+            System.out.print(allPlayers.get(i).toString() + "'s probabilities: ");
+            Card.Value cards[] = user.cardsInHand();
+            for(int j = 0; j < cards.length; j++){
+                double probability = calculateProbability(allPlayers.get(i), cards[j]);
+                System.out.printf("\t%.2f",probability);
+            }
+            System.out.println();
+        }
+    }
+
+    public static double calculateProbability(Player requestedPlayer, Card.Value card){
+        int unknownInHands = 0;
+        int numRemaining = available[card.ordinal()];
+        int unknownInRequestedHand = 0;
+        for(int i = 1; i < allPlayers.size(); i++){
+            Player currentPlayer = allPlayers.get(i);
+            int possibleNumInHand = probabilityInfoMap.get(currentPlayer).get(card.ordinal());
+            unknownInHands += possibleNumInHand;
+            if(currentPlayer == requestedPlayer){
+                unknownInRequestedHand = possibleNumInHand;
+            }
+        }
+        int totalUnknown = unknownInHands + deck.size();
+        double probability = (1.0*numRemaining)/totalUnknown;
+        probability = (probability*unknownInRequestedHand)/unknownInHands;
+        System.out.printf("TotalUnknown = %d NumRemaining = %d UnknwonInRequestedHand = %d UnknownInHands = %d\n", totalUnknown, numRemaining, unknownInRequestedHand, unknownInHands);
+        return probability;
     }
 
     public static void clearScreen(){

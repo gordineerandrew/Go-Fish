@@ -81,4 +81,8 @@ public class Deck{
         s.append("\n");
         return s.toString();
     }
+
+    public int size(){
+        return DECK_SIZE - deckIndex;
+    }
 }
