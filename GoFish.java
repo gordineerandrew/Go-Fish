@@ -88,8 +88,6 @@ public class GoFish{
                     System.out.println();
                 }
                 else{
-                    /* let players know that this player has made a book of this card */
-                    alertBook(currentPlayer, requestedCard, false);
                     /* display */
                     System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
                     System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
@@ -418,7 +416,7 @@ public class GoFish{
         }
 
         /* display the winner */
-        System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
+        System.out.printf("%doubledouble wins with a score of %d\n", winner.getName(), maxScore);
         /* print the human player's outcome message */
         String outcome = winner == user ? "Congrats" : "Better luck next time";
         System.out.printf("%s %s\n", outcome, user.getName());
@@ -430,14 +428,14 @@ public class GoFish{
             System.out.print(allPlayers.get(i).toString() + "'s probabilities: ");
             Card.Value cards[] = user.cardsInHand();
             for(int j = 0; j < cards.length; j++){
-                double probability = calculateProbability(allPlayers.get(i), cards[j]);
-                System.out.printf("\t%.2f",probability);
+                long probability = calculateProbability(allPlayers.get(i), cards[j]);
+                System.out.printf("\t%d%%",probability);
             }
             System.out.println();
         }
     }
 
-    public static double calculateProbability(Player requestedPlayer, Card.Value card){
+    public static long calculateProbability(Player requestedPlayer, Card.Value card){
         int unknownInHands = 0;
         int numRemaining = available[card.ordinal()];
         int unknownInRequestedHand = 0;
@@ -449,11 +447,13 @@ public class GoFish{
                 unknownInRequestedHand = possibleNumInHand;
             }
         }
+        /* Return 0 if all cards are known not to be card. Fixes NaN issue */
+        if(unknownInHands == 0)
+            return 0;
         int totalUnknown = unknownInHands + deck.size();
-        double probability = (1.0*numRemaining)/totalUnknown;
+        double probability = (100.0*numRemaining)/totalUnknown;
         probability = (probability*unknownInRequestedHand)/unknownInHands;
-        System.out.printf("TotalUnknown = %d NumRemaining = %d UnknwonInRequestedHand = %d UnknownInHands = %d\n", totalUnknown, numRemaining, unknownInRequestedHand, unknownInHands);
-        return probability;
+        return Math.round(probability);
     }
 
     public static void clearScreen(){
