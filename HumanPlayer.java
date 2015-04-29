@@ -12,7 +12,7 @@ public class HumanPlayer extends Player{
 
     public void beginTurn(){
         super.beginTurn();
-        System.out.print("Current hand: ");
+        System.out.printf("%-22s","Current hand:");
         displayHand();
         GoFish.getProbabilities();
     }

@@ -143,7 +143,7 @@ public class GoFish{
         /* generate opponents */
         ArrayList<AIPlayer> opponents = new ArrayList<AIPlayer>(numOpponents);
         for(int i = 0; i < numOpponents; i++){
-            AIPlayer opp = new AIPlayer("COM Player "+(i+1), deck);
+            AIPlayer opp = new AIPlayer("NPC-"+(i+1), deck);
             GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, opp.getName().length());
 
             /* add to both opplist and alllist so
@@ -198,8 +198,10 @@ public class GoFish{
         for(Player p: allPlayers){
             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
                 p.drawCard();
+                if(p instanceof HumanPlayer)
+                    Thread.sleep(GameConstants.TIME_DELAY/2);
             }
-            Thread.sleep(GameConstants.TIME_DELAY);
+
         }
     }
 
@@ -429,7 +431,7 @@ public class GoFish{
             Card.Value cards[] = user.cardsInHand();
             for(int j = 0; j < cards.length; j++){
                 long probability = calculateProbability(allPlayers.get(i), cards[j]);
-                System.out.printf("\t%d%%",probability);
+                System.out.printf("\t %d%%",probability);
             }
             System.out.println();
         }
@@ -454,6 +456,15 @@ public class GoFish{
         double probability = (100.0*numRemaining)/totalUnknown;
         probability = (probability*unknownInRequestedHand)/unknownInHands;
         return Math.round(probability);
+    }
+
+    /* Method to print out the scores of all of the players in the game */
+    public static void printScores(){
+        System.out.print("SCORES\t");
+        for(int i = 0; i < allPlayers.size(); i++){
+            System.out.printf("%8s: %d\t", allPlayers.get(i).toString(), allPlayers.get(i).getScore());
+        }
+        System.out.printf("\n");
     }
 
     public static void clearScreen(){

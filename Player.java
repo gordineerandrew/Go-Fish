@@ -111,8 +111,12 @@ public abstract class Player{
     }
 
     public void displayHand(){
-        String s = hand.toString();
-        System.out.println(s.substring(1,s.length()-1));
+        StringBuilder s = new StringBuilder();
+        for(Card c : hand){
+            s.append("\t");
+            s.append(c.toString());
+        }
+        System.out.println(s);
     }
 
     public int getHandSize(){
@@ -135,7 +139,7 @@ public abstract class Player{
 
     public void beginTurn(){
         System.out.println(name + "'s turn.");
-        System.out.println("Score: " + score);
+        GoFish.printScores();
     }
     public void endTurn(){
         System.out.println(name + "'s score: " + score);
