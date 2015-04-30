@@ -78,6 +78,7 @@ public class GoFish{
                 System.out.println();
                 Player requestedPlayer = selectPlayer(currentPlayer);
                 Card.Value requestedCard = selectCard(currentPlayer);
+                alertRequest(currentPlayer, requestedCard);
                 System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
 
                 /* ask the requestedPlayer for the requestedCard */
@@ -365,7 +366,8 @@ public class GoFish{
     public static void decrementProbabilities(Player p){
         ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
         for(int i = 0; i < probabilityChart.size(); i++){
-            probabilityChart.set(i, probabilityChart.get(i)-1);
+            if(probabilityChart.get(i) != 0)
+                probabilityChart.set(i, probabilityChart.get(i)-1);
         }
     }
 
@@ -418,7 +420,7 @@ public class GoFish{
         }
 
         /* display the winner */
-        System.out.printf("%doubledouble wins with a score of %d\n", winner.getName(), maxScore);
+        System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
         /* print the human player's outcome message */
         String outcome = winner == user ? "Congrats" : "Better luck next time";
         System.out.printf("%s %s\n", outcome, user.getName());
@@ -430,32 +432,44 @@ public class GoFish{
             System.out.print(allPlayers.get(i).toString() + "'s probabilities: ");
             Card.Value cards[] = user.cardsInHand();
             for(int j = 0; j < cards.length; j++){
-                long probability = calculateProbability(allPlayers.get(i), cards[j]);
-                System.out.printf("\t %d%%",probability);
+                double probability = calculateProbability(allPlayers.get(i), cards[j]);
+                System.out.printf("\t%.1f%%",probability);
             }
             System.out.println();
         }
     }
 
-    public static long calculateProbability(Player requestedPlayer, Card.Value card){
+    public static double calculateProbability(Player requestedPlayer, Card.Value card){
         int unknownInHands = 0;
         int numRemaining = available[card.ordinal()];
         int unknownInRequestedHand = 0;
         for(int i = 1; i < allPlayers.size(); i++){
             Player currentPlayer = allPlayers.get(i);
             int possibleNumInHand = probabilityInfoMap.get(currentPlayer).get(card.ordinal());
-            unknownInHands += possibleNumInHand;
+            if(possibleNumInHand <= GameConstants.GUARANTEED_CARD || currentPlayer == requestedPlayer)
+                unknownInHands += possibleNumInHand;
+            else if(numRemaining == 2)
+                return 0;
             if(currentPlayer == requestedPlayer){
                 unknownInRequestedHand = possibleNumInHand;
             }
         }
         /* Return 0 if all cards are known not to be card. Fixes NaN issue */
+        if(unknownInRequestedHand > GameConstants.GUARANTEED_CARD)
+            return 100;
         if(unknownInHands == 0)
             return 0;
         int totalUnknown = unknownInHands + deck.size();
-        double probability = (100.0*numRemaining)/totalUnknown;
+        double probability = (100.0*(numRemaining-1))/totalUnknown;
         probability = (probability*unknownInRequestedHand)/unknownInHands;
-        return Math.round(probability);
+        if(GameConstants.DEBUG){
+            System.out.println("\nunknownInHands = " + unknownInHands);
+            System.out.println("TotalUnknown = " + totalUnknown);
+            System.out.println("unknownInRequestedHand = " + unknownInRequestedHand);
+            System.out.println("numRemaining = " + (numRemaining-1));
+            System.out.println();
+        }
+        return probability;
     }
 
     /* Method to print out the scores of all of the players in the game */
@@ -465,6 +479,10 @@ public class GoFish{
             System.out.printf("%8s: %d\t", allPlayers.get(i).toString(), allPlayers.get(i).getScore());
         }
         System.out.printf("\n");
+    }
+
+    public static void alertRequest(Player p, Card.Value value){
+        probabilityInfoMap.get(p).set(value.ordinal(), 1000);
     }
 
     public static void clearScreen(){

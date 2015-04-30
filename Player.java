@@ -42,6 +42,8 @@ public abstract class Player{
         Card newCard = deckRef.draw();
         /* if there are cards left in the deck... */
         if(newCard != null){
+            /* incrememnt probabilities across board by 1 */
+            GoFish.incrementProbabilities(this);
             /* get the value of the new card */
             Card.Value newValue = newCard.getValue();
 
@@ -57,9 +59,6 @@ public abstract class Player{
             else{
                 hand.add(newCard);
             }
-
-            /* incrememnt probabilities across board by 1 */
-            GoFish.incrementProbabilities(this);
         }
         /* else don't draw */
 

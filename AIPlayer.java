@@ -5,7 +5,6 @@ public class AIPlayer extends Player{
     public Card drawCard(){
         Card c = super.drawCard();
         if(GameConstants.DEBUG && c != null){
-            System.out.println(GameConstants.DEBUG);
             System.out.println(this.name + " drew: " + c);
         }
         return c;
