@@ -461,7 +461,7 @@ public class GoFish{
             return 0;
         int totalUnknown = unknownInHands + deck.size();
         double probability = (100.0*(numRemaining-1))/totalUnknown;
-        probability = (probability*unknownInRequestedHand)/unknownInHands;
+        probability *= unknownInRequestedHand;
         if(GameConstants.DEBUG){
             System.out.println("\nunknownInHands = " + unknownInHands);
             System.out.println("TotalUnknown = " + totalUnknown);
