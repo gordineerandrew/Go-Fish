@@ -9,22 +9,23 @@ public class StatsDriver{
 	public static PrintWriter statsPrinter;
 
 	public static void main(String[] args)throws IOException, InterruptedException{
-		/*
+		/*s
 		arg0 = N number of trials for each GoFish game
 		arg1 = logfile for each trial
+		arg2 = smart or random auto
 		arg2 = M number of repititions of the N trials
 		arg3 = logfile for all trials
 		*/
-		if(args.length < 4)
+		if(args.length < 5)
 		{
 			System.err.println("Too Few Arguments\n");
 			return;
 		}
 
-		String logfile = args[3];
+		String logfile = args[4];
 		statsPrinter = new PrintWriter(new BufferedWriter(new FileWriter(logfile, false)));
 
-		int repititions = Integer.parseInt(args[2]);
+		int repititions = Integer.parseInt(args[3]);
 		
 
 		for(int i = 0; i < repititions; i++)

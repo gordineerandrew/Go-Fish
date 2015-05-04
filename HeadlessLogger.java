@@ -11,8 +11,13 @@ public class HeadlessLogger{
 
 	public static void main(String[] args) throws IOException, InterruptedException{
 		
+		/*
+		args0 = N trials to run
+		args1 = file to log to
+		args2 = smart (nonzero) or random auto (0) 
+		*/
 
-		if(args.length < 1)
+		if(args.length < 2)
 		{
 			System.out.println("ERROR: not enough arguments\n");
 			return;
@@ -30,6 +35,10 @@ public class HeadlessLogger{
 		GameConstants.HEADLESS = true;
 		GameConstants.LOG = true;
 		GameConstants.AUTO = true;
+		if(Integer.parseInt(args[2]) != 0)
+		{
+			GameConstants.SMART = true;
+		}
 
 		int trials = Integer.parseInt(args[0]);
 		for(int i = 0; i < trials; i++)
@@ -43,8 +52,10 @@ public class HeadlessLogger{
 
 		out.close();
 
-		if(args.length < 3) System.out.printf("TRIALS DONE\n");
+		if(args.length == 3) 
+			System.out.printf("TRIALS DONE WITH %s CHARACTER\n", GameConstants.SMART ? "SMART":"RANDOM");
 
-		StatsDriver.statsPrinter.printf("%.2f, ", (100.0*wins)/trials);
+		else 
+			StatsDriver.statsPrinter.printf("%.2f, ", (100.0*wins)/trials);
 	}
 }

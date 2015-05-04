@@ -165,7 +165,8 @@ public class GoFish{
 
         /* generate human player */
         if(GameConstants.AUTO)
-            user = new AutoHumanPlayer(GameConstants.PLAYER_NAME, deck);
+            user = GameConstants.SMART ? new AutoHumanPlayer(GameConstants.PLAYER_NAME, deck) : new AIPlayer(GameConstants.PLAYER_NAME, deck);
+        
         else
             user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
 
