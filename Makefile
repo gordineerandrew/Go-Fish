@@ -35,6 +35,9 @@ AIPlayer.class: AIPlayer.java Player.class
 GoFish.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class PlayerCardTuple.class GoFish.java
 	$(JC) GoFish.java
 
+StatsDriver.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class GoFish.class PlayerCardTuple.class HeadlessLogger.class StatsDriver.java
+	$(JC) StatsDriver.java
+
 HeadlessLogger.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class GoFish.class PlayerCardTuple.class HeadlessLogger.java
 	$(JC) HeadlessLogger.java
 
@@ -42,6 +45,8 @@ GoFish: GoFish.class
 	$(JR) $(RFLAGS) GoFish
 
 AutoGoFish: HeadlessLogger.class
+
+StatsDriver: StatsDriver.class
 
 clean:
 	rm *.class

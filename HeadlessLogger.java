@@ -34,7 +34,8 @@ public class HeadlessLogger{
 		int trials = Integer.parseInt(args[0]);
 		for(int i = 0; i < trials; i++)
 		{
-			System.out.printf("Trial %4d\tRunning...\n", i+1);
+			if(args.length < 3) System.out.printf("Trial %4d\tRunning...\n", i+1);
+
 			GoFish.main(args);
 		}
 
@@ -42,6 +43,8 @@ public class HeadlessLogger{
 
 		out.close();
 
-		System.out.printf("TRIALS DONE\n");
+		if(args.length < 3) System.out.printf("TRIALS DONE\n");
+
+		StatsDriver.statsPrinter.printf("%.2f, ", (100.0*wins)/trials);
 	}
 }
