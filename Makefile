@@ -1,6 +1,10 @@
 JC = javac
 JR = java
 RFLAGS = -ea
+
+PlayerCardTuple.class: PlayerCardTuple.java
+	$(JC) PlayerCardTuple.java
+
 GameConstants.class: GameConstants.java
 	$(JC) GameConstants.java
 
@@ -22,14 +26,22 @@ Player.class: Player.java
 HumanPlayer.class: HumanPlayer.java Player.class
 	$(JC) HumanPlayer.java
 
+AutoHumanPlayer.class: AutoHumanPlayer.java HumanPlayer.class Player.class
+	$(JC) AutoHumanPlayer.java
+
 AIPlayer.class: AIPlayer.java Player.class
 	$(JC) AIPlayer.java
 
-GoFish.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class GoFish.java
+GoFish.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class PlayerCardTuple.class GoFish.java
 	$(JC) GoFish.java
+
+HeadlessLogger.class: GameConstants.class Card.class Deck.class HumanPlayer.class AIPlayer.class GoFish.class PlayerCardTuple.class HeadlessLogger.java
+	$(JC) HeadlessLogger.java
 
 GoFish: GoFish.class
 	$(JR) $(RFLAGS) GoFish
+
+AutoGoFish: HeadlessLogger.class
 
 clean:
 	rm *.class

@@ -66,20 +66,22 @@ public class GoFish{
 
             while(!turnOver && !gameOver){
                 /* Wait for the player to advance the game */
-               if(!GameConstants.HEADLESS) System.out.print("Press enter to continue the game.");
-               if(!GameConstants.HEADLESS) System.in.read();
-                clearScreen();
+                if(!GameConstants.HEADLESS){
+                    System.out.print("Press enter to continue the game.");
+                    if(!GameConstants.AUTO) System.in.read();
+                    clearScreen();
+                } 
 
                 /* SELECTION PHASE */
                 currentPlayer.beginTurn();
-               if(!GameConstants.HEADLESS) System.out.println();
+                if(!GameConstants.HEADLESS) System.out.println();
                 /* ask the current player who they would like to request a card from */
                 Player requestedPlayer = selectPlayer(currentPlayer);
                 /* ask the current player what card they would like to request */
                 Card.Value requestedCard = selectCard(currentPlayer);
                 /* tell the rest of the players that the current player has requested a specific card */
                 alertRequest(currentPlayer, requestedCard);
-               if(!GameConstants.HEADLESS) System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
+                if(!GameConstants.HEADLESS) System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
 
                 /* ask the requestedPlayer for the requestedCard */
                 if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
@@ -90,16 +92,18 @@ public class GoFish{
                     goFish(currentPlayer);
                     /* end of turn */
                     turnOver = true;
-                   if(!GameConstants.HEADLESS) System.out.println();
+                    if(!GameConstants.HEADLESS) System.out.println();
                 }
                 else{
                     /* the player has guessed CORRECTLY!... */
-                   if(!GameConstants.HEADLESS) System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
-                   if(!GameConstants.HEADLESS) System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
+                    if(!GameConstants.HEADLESS) {
+                        System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
+                        System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
+                    }
                     /* inform the rest of the players that the requested 
                     player no longer has the requested Card */
                     decrementAndZero(requestedPlayer, requestedCard);
-                   if(!GameConstants.HEADLESS) System.out.println();
+                    if(!GameConstants.HEADLESS) System.out.println();
                 }
 
                 /* END PHASE */
@@ -132,8 +136,10 @@ public class GoFish{
         int numOpponents;
         /* while the player inputs a number not between 0 and the max prompt for another number */
         while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
-           if(!GameConstants.HEADLESS) System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
-           if(!GameConstants.HEADLESS) System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
+           if(!GameConstants.HEADLESS){
+                System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
+                System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
+           } 
         }
         /*flush the input buffer of new line characters */
         userIn.nextLine();
@@ -150,7 +156,11 @@ public class GoFish{
         allPlayers = new ArrayList<Player>(numOpponents+1);
 
         /* generate human player */
-        user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
+        if(GameConstants.AUTO)
+            user = new AutoHumanPlayer(GameConstants.PLAYER_NAME, deck);
+        else
+            user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
+
         GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
         allPlayers.add(user);
 
@@ -173,8 +183,8 @@ public class GoFish{
         dealCards();
 
         /* DEBUG: Prints the deck after cards have been dealt. */
-        if(GameConstants.DEBUG){
-           if(!GameConstants.HEADLESS) System.out.println(deck);
+        if(GameConstants.DEBUG && !GameConstants.HEADLESS){
+           System.out.println(deck);
         }
        if(!GameConstants.HEADLESS) System.out.println("\n");
 
@@ -278,8 +288,14 @@ public class GoFish{
     */
     public static Player selectPlayer(Player currentPlayer){
 
+        /* AUTO HUMAN BEHAVIOR */
+        if(currentPlayer instanceof AutoHumanPlayer){
+            AutoHumanPlayer autop = (AutoHumanPlayer)currentPlayer;
+            return autop.getChoice().p;
+        }
+
         /* HUMAN BEHAVIOR */
-        if(currentPlayer instanceof HumanPlayer){
+        else if(currentPlayer instanceof HumanPlayer){
             /* prompt user for player selection */
            if(!GameConstants.HEADLESS) System.out.println("Which player would you like to request a card from? ");
             /* display players to select from. */
@@ -289,10 +305,13 @@ public class GoFish{
             }
             int request;
             /* check that selection is valid */
-           if(!GameConstants.HEADLESS) System.out.print("Selection: ");
+            if(!GameConstants.HEADLESS) System.out.print("Selection: ");
             while((request = userIn.nextInt()) < 1 || request >= allPlayers.size()){
-               if(!GameConstants.HEADLESS) System.out.println("That is not a valid choice.");
-               if(!GameConstants.HEADLESS) System.out.print("Which player would you like to request a card from? ");
+                if(!GameConstants.HEADLESS){
+                    System.out.println("That is not a valid choice.");
+                    System.out.print("Which player would you like to request a card from? ");
+                } 
+
                 for(int i = 1; i < allPlayers.size(); i++){
                    if(!GameConstants.HEADLESS) System.out.println(i + ". " + allPlayers.get(i));
                 }
@@ -328,25 +347,35 @@ public class GoFish{
     the value of the card they select
     */
     public static Card.Value selectCard(Player currentPlayer){
-        /* if the current player is a human... */
-        if(currentPlayer instanceof HumanPlayer){
+        /* AUTO HUMAN BEHAVIOR */
+        if(currentPlayer instanceof AutoHumanPlayer){
+            AutoHumanPlayer autop = (AutoHumanPlayer)currentPlayer;
+            return autop.getChoice().c;
+        }
+
+        /* HUMAN BEHAVIOR */
+        else if(currentPlayer instanceof HumanPlayer){
             /* prompt user for card selection based on current hand */
-           if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
+            if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
             currentPlayer.displayHand();
-           if(!GameConstants.HEADLESS) System.out.print("NOTE: T = 10\nSelect a card to request: ");
+            if(!GameConstants.HEADLESS) System.out.print("NOTE: T = 10\nSelect a card to request: ");
             Card.Value request;
             String requestString;
             /* if the input is not a real card or not in the current player's hand
             then reprompt the player */
             while((requestString = userIn.nextLine()).equals("") || (request = Card.charToValue(requestString.charAt(0))) == Card.Value.NOTAVALUE || currentPlayer.getCard(request) == null){
-               if(!GameConstants.HEADLESS) System.out.println("That is not a valid choice.");
-               if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
+                if(!GameConstants.HEADLESS){
+                    System.out.println("That is not a valid choice.");
+                    System.out.print("Current hand: ");
+                }
+
                 currentPlayer.displayHand();
-               if(!GameConstants.HEADLESS) System.out.print("NOTE: T = 10\nSelect a card to request: ");
+                if(!GameConstants.HEADLESS) System.out.print("NOTE: T = 10\nSelect a card to request: ");
             }
-           if(!GameConstants.HEADLESS) System.out.println();
+            if(!GameConstants.HEADLESS) System.out.println();
             return request;
         }
+
         else{
             /* AI Selects a random card */
             Random r = new Random();
@@ -356,7 +385,6 @@ public class GoFish{
             while((cardChoice = currentPlayer.getCard(Card.intToValue(r.nextInt(13) + 1))) == null){}
             return cardChoice.getValue();
         }
-
     }
 
     /* 
@@ -408,13 +436,13 @@ public class GoFish{
     public static void goFish(Player p){
         /* keep track of their old score for display purposes */
         int oldScore = p.getScore();
-       if(!GameConstants.HEADLESS) System.out.println("\nGO-FISH!");
+        if(!GameConstants.HEADLESS) System.out.println("\nGO-FISH!");
         Card newCard = p.drawCard();
         /* if they created a book (score changed) display that */
         if(oldScore != p.getScore()){
            if(!GameConstants.HEADLESS) System.out.println(p + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
         }
-       if(!GameConstants.HEADLESS) System.out.println("TURN OVER");
+        if(!GameConstants.HEADLESS) System.out.println("TURN OVER");
     }
 
     /*
@@ -506,24 +534,24 @@ public class GoFish{
 
         /* is the deck empty */
         if(emptyDeck){
-           if(!GameConstants.HEADLESS) System.out.println("Deck is empty!");
+            if(!GameConstants.HEADLESS) System.out.println("Deck is empty!");
             gameOver = true;
         }
 
         /* is the current player's hand empty?*/
         else if(current.handEmpty()){
-           if(!GameConstants.HEADLESS) System.out.printf("%s's hand is empty!\n", current.getName());
+            if(!GameConstants.HEADLESS) System.out.printf("%s's hand is empty!\n", current.getName());
             gameOver = true;
         }
 
         /* is the interacted-with player's hand empty? */
         else if(other.handEmpty()){
-           if(!GameConstants.HEADLESS) System.out.printf("%s's hand is empty!\n", other.getName());
+            if(!GameConstants.HEADLESS) System.out.printf("%s's hand is empty!\n", other.getName());
             gameOver = true;
         }
 
         if(gameOver)
-           if(!GameConstants.HEADLESS) System.out.println("GAME OVER!");
+            if(!GameConstants.HEADLESS) System.out.println("GAME OVER!");
 
         return gameOver;
     }
@@ -556,10 +584,12 @@ public class GoFish{
         }
 
         /* display the winner */
-       if(!GameConstants.HEADLESS) System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
-        /* print the human player's outcome message */
-        String outcome = winner == user ? "Congrats" : "Better luck next time";
-       if(!GameConstants.HEADLESS) System.out.printf("%s %s\n", outcome, user.getName());
+        if(!GameConstants.HEADLESS){ 
+            System.out.printf("%s wins with a score of %d\n", winner.getName(), maxScore);
+            /* print the human player's outcome message */
+            String outcome = winner == user ? "Congrats" : "Better luck next time";
+            System.out.printf("%s %s\n", outcome, user.getName());
+        }
     }
 
     /* 
@@ -567,15 +597,32 @@ public class GoFish{
     so that they may make the most effective guess possible 
     */
     public static void getProbabilities(){
-        /* Starting at 1 to not include the human player */
+
+        ArrayList<ArrayList<PlayerCardTuple>> probabilitySet = new ArrayList<ArrayList<PlayerCardTuple>>(allPlayers.size()-1);
+
+        /* Starting at 1 to not include the human player */     
         for(int i = 1; i < allPlayers.size(); i++){
-           if(!GameConstants.HEADLESS) System.out.print(allPlayers.get(i).toString() + "'s probabilities: ");
+
+            ArrayList<PlayerCardTuple> singleSet = new ArrayList<PlayerCardTuple>();
+           
+            if(!GameConstants.HEADLESS) System.out.print(allPlayers.get(i).toString() + "'s probabilities: ");
+
             Card.Value cards[] = user.cardsInHand();
+
             for(int j = 0; j < cards.length; j++){
                 double probability = calculateProbability(allPlayers.get(i), cards[j]);
-               if(!GameConstants.HEADLESS) System.out.printf("\t%.1f%%",probability);
+                singleSet.add(new PlayerCardTuple(allPlayers.get(i), cards[j], probability));
+                if(!GameConstants.HEADLESS) System.out.printf("\t%.1f%%",probability);
             }
-           if(!GameConstants.HEADLESS) System.out.println();
+
+            probabilitySet.add(singleSet);
+
+            if(!GameConstants.HEADLESS) System.out.println();
+        }
+
+        if(user instanceof AutoHumanPlayer){
+            AutoHumanPlayer auto_user = (AutoHumanPlayer)user;
+            auto_user.automateChoice(probabilitySet);
         }
     }
 
@@ -666,9 +713,9 @@ public class GoFish{
     /* auxillary function to clear the screen for formatting purposes */
     public static void clearScreen(){
         if(!GameConstants.HEADLESS){
-           if(!GameConstants.HEADLESS) System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-           if(!GameConstants.HEADLESS) System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-           if(!GameConstants.HEADLESS) System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+           System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+           System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+           System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         }
     }
 }

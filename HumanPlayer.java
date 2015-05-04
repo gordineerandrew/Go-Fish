@@ -22,10 +22,11 @@ public class HumanPlayer extends Player{
 
     public void beginTurn(){
         super.beginTurn();
-       if(!GameConstants.HEADLESS) System.out.printf("%-22s","Current hand:");
+        if(!GameConstants.HEADLESS) System.out.printf("%-22s","Current hand:");
         displayHand();
         GoFish.getProbabilities();
     }
+    
     public void endTurn(){
         super.endTurn();
        if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
