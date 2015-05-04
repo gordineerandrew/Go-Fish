@@ -15,20 +15,20 @@ public class HumanPlayer extends Player{
     public Card drawCard(){
         Card c = super.drawCard();
         if(c != null){
-            System.out.println(this.name + " drew: " + c);
+           if(!GameConstants.HEADLESS) System.out.println(this.name + " drew: " + c);
         }
         return c;
     }
 
     public void beginTurn(){
         super.beginTurn();
-        System.out.printf("%-22s","Current hand:");
+       if(!GameConstants.HEADLESS) System.out.printf("%-22s","Current hand:");
         displayHand();
         GoFish.getProbabilities();
     }
     public void endTurn(){
         super.endTurn();
-        System.out.print("Current hand: ");
+       if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
         displayHand();
     }
 

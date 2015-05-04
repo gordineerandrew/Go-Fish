@@ -17,4 +17,7 @@ public class GameConstants{
     public static int LONGEST_NAME_WIDTH = 0;			// used for formatting
     public static final int GUARANTEED_CARD = 13;		// constant used to determine if a player is 
     													// 		guaranteed to have a card in their hand
+    public static boolean HEADLESS = false;				// is the game headless or not
+    public static boolean LOG = false;					// should the output of the game be logged?
+    public static String LOGFILE = "log.txt";			// name of the log file
 }

@@ -141,7 +141,7 @@ public abstract class Player{
             s.append("\t");
             s.append(c.toString());
         }
-        System.out.println(s);
+       if(!GameConstants.HEADLESS) System.out.println(s);
     }
 
     /* how many cards are in the player's hand? */
@@ -166,16 +166,16 @@ public abstract class Player{
     public void displayState(){
         String s = hand.toString();
         s = s.substring(1,s.length()-1);
-        System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, s);
+       if(!GameConstants.HEADLESS) System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, s);
     }
 
     /* some simple information displayed the user about each player's turn */
     public void beginTurn(){
-        System.out.println(name + "'s turn.");
+       if(!GameConstants.HEADLESS) System.out.println(name + "'s turn.");
         GoFish.printScores();
     }
     public void endTurn(){
-        System.out.println(name + "'s score: " + score);
+       if(!GameConstants.HEADLESS) System.out.println(name + "'s score: " + score);
     }
 
 }

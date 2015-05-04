@@ -25,7 +25,7 @@ public class AIPlayer extends Player{
     public Card drawCard(){
         Card c = super.drawCard();
         if(GameConstants.DEBUG && c != null){
-            System.out.println(this.name + " drew: " + c);
+           if(!GameConstants.HEADLESS) System.out.println(this.name + " drew: " + c);
         }
         return c;
     }
