@@ -144,6 +144,14 @@ public abstract class Player{
        if(!GameConstants.HEADLESS) System.out.println(s);
     }
 
+    public Card.Value[] cardsInHand(){
+        Card.Value[] cards = new Card.Value[hand.size()];
+        for(int i = 0; i < hand.size(); i++){
+            cards[i] = hand.get(i).getValue();
+        }
+        return cards;
+    }
+
     /* how many cards are in the player's hand? */
     public int getHandSize(){
         return hand.size();

@@ -40,7 +40,7 @@ public class GoFish{
     private static Deck deck;
 
     /* Global User Player */
-    private static HumanPlayer user;
+    private static Player user;
 
     /* Global pool of cards still in play */
     private static int[] available;
@@ -61,8 +61,6 @@ public class GoFish{
         boolean gameOver = false;
 
         while(!gameOver){
-            /* delay the output for readability */
-            delay(GameConstants.TIME_DELAY);
 
             /* BEGINNING PHASE */
             /* select the player whose turn is next */
@@ -112,8 +110,6 @@ public class GoFish{
                 }
 
                 /* END PHASE */
-                /* delay output for readability */
-                delay(GameConstants.TIME_DELAY);
                 /* update the win condition */
                 gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
             }

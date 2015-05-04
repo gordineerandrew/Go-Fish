@@ -32,12 +32,4 @@ public class HumanPlayer extends Player{
        if(!GameConstants.HEADLESS) System.out.print("Current hand: ");
         displayHand();
     }
-
-    public Card.Value[] cardsInHand(){
-        Card.Value[] cards = new Card.Value[hand.size()];
-        for(int i = 0; i < hand.size(); i++){
-            cards[i] = hand.get(i).getValue();
-        }
-        return cards;
-    }
 }
