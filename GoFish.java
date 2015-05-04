@@ -16,6 +16,11 @@ import java.util.Random;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.Formatter;
+import java.util.Locale;
 
 public class GoFish{
 
@@ -569,7 +574,7 @@ public class GoFish{
     done by simply iterating over the list and finding the player
     with the highest score 
     */
-    public static void determineWinner(){
+    public static void determineWinner() throws IOException{
         Player winner = null;
         int maxScore = 0;
 
@@ -596,6 +601,15 @@ public class GoFish{
             /* print the human player's outcome message */
             String outcome = winner == user ? "Congrats" : "Better luck next time";
             System.out.printf("%s %s\n", outcome, user.getName());
+        }
+
+        if(GameConstants.LOG){
+            StringBuilder outcome = new StringBuilder();
+            outcome.append(winner == user ? "WIN " : "LOSE ");
+            outcome.append(scoresToString());
+            HeadlessLogger.out.println(outcome.toString());  
+            if(winner == user)
+                HeadlessLogger.wins++;
         }
     }
 
@@ -703,12 +717,16 @@ public class GoFish{
     }
 
     /* Method to print out the scores of all of the players in the game */
-    public static void printScores(){
-       if(!GameConstants.HEADLESS) System.out.print("SCORES\t");
+    public static String scoresToString(){
+        StringBuilder s = new StringBuilder();
+        Formatter f = new Formatter(s, Locale.US);
+        f.format("SCORES\t");
         for(int i = 0; i < allPlayers.size(); i++){
-           if(!GameConstants.HEADLESS) System.out.printf("%8s: %d\t", allPlayers.get(i).toString(), allPlayers.get(i).getScore());
+           f.format("%8s: %d\t", allPlayers.get(i).toString(), allPlayers.get(i).getScore());
         }
-       if(!GameConstants.HEADLESS) System.out.printf("\n");
+        f.format("\n");
+
+        return s.toString();
     }
 
     public static void delay(int time) throws InterruptedException{

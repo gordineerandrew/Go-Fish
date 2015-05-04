@@ -171,8 +171,11 @@ public abstract class Player{
 
     /* some simple information displayed the user about each player's turn */
     public void beginTurn(){
-       if(!GameConstants.HEADLESS) System.out.println(name + "'s turn.");
-        GoFish.printScores();
+        if(!GameConstants.HEADLESS){
+            System.out.println(name + "'s turn.");
+            String scores = GoFish.scoresToString();
+            System.out.printf(scores);
+        } 
     }
     public void endTurn(){
        if(!GameConstants.HEADLESS) System.out.println(name + "'s score: " + score);

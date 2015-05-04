@@ -1,21 +1,34 @@
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class HeadlessLogger{
+
+	public static PrintWriter out;
+	public static int wins;
+
 	public static void main(String[] args) throws IOException, InterruptedException{
+		
+
 		if(args.length < 1)
 		{
 			System.out.println("ERROR: not enough arguments\n");
 			return;
 		}
 
+		String logfile = GameConstants.LOGFILE;
 		if(args.length > 1 && args[1].contains(".txt"))
 		{
-			GameConstants.LOGFILE = args[1];
+			logfile = args[1];
 		}
 
+		out = new PrintWriter(new BufferedWriter(new FileWriter(logfile, false)));
+		wins = 0;
+
 		GameConstants.HEADLESS = true;
-		// GameConstants.LOG = true;
+		GameConstants.LOG = true;
 		GameConstants.AUTO = true;
 
 		int trials = Integer.parseInt(args[0]);
@@ -24,6 +37,10 @@ public class HeadlessLogger{
 			System.out.printf("Trial %4d\tRunning...\n", i+1);
 			GoFish.main(args);
 		}
+
+		out.println(wins);
+
+		out.close();
 
 		System.out.printf("TRIALS DONE\n");
 	}
