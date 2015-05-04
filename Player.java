@@ -1,3 +1,13 @@
+/*
+File:         Player.java
+Created:      2015/03/21
+Last Changed: 2015/04/30
+Author:      Scott Munro <scottnmunro@gmail.com>
+             Andrew Gordineer <gordineerandrew@gmail.com>
+
+Base state and behavior of every player in the game
+*/
+
 import java.util.ArrayList;
 
 public abstract class Player{
@@ -5,9 +15,13 @@ public abstract class Player{
 
     /* state of the player */
     protected String name;
+    /* reference to the deck */
     protected Deck deckRef;
+    /* player's hand of cards */
     protected ArrayList<Card> hand;
+    /* current score */
     protected int score;
+    /* list of books owned by this player */
     protected int[] books = new int[MAX_TOTAL_BOOKS];
 
 
@@ -29,6 +43,10 @@ public abstract class Player{
         return score;
     }
 
+    /* 
+    function used to track the player's score and update other players
+    when the player creates a book 
+    */
     private void collectBook(Card.Value value, boolean drewCard){
         books[value.ordinal()]++;
         score++;
@@ -38,6 +56,11 @@ public abstract class Player{
             GoFish.alertBook(this, value, drewCard);
     }
 
+    /* 
+    draws a card from the deck if any are left
+    updates the probabilty map and alerts other players of the 
+    new unknown card 
+    */
     public Card drawCard(){
         Card newCard = deckRef.draw();
         /* if there are cards left in the deck... */
@@ -109,6 +132,9 @@ public abstract class Player{
         return false;
     }
 
+    /* 
+    display the player's hand in a human readable form
+    */
     public void displayHand(){
         StringBuilder s = new StringBuilder();
         for(Card c : hand){
@@ -118,24 +144,32 @@ public abstract class Player{
         System.out.println(s);
     }
 
+    /* how many cards are in the player's hand? */
     public int getHandSize(){
         return hand.size();
     }
 
+    /* is the player's hand empty ? */
     public boolean handEmpty(){
         return hand.size() == 0;
     }
 
+    /* returns a human readable ID of the player (their name) */
     public String toString(){
         return getName();
     }
 
+    /* 
+    display the current state of the player 
+    i.e.: HAND AND SCORE
+    */
     public void displayState(){
         String s = hand.toString();
         s = s.substring(1,s.length()-1);
         System.out.printf("%s:\tScore: %d\tHand: %s\n", name, score, s);
     }
 
+    /* some simple information displayed the user about each player's turn */
     public void beginTurn(){
         System.out.println(name + "'s turn.");
         GoFish.printScores();

@@ -1,18 +1,25 @@
-
 /*
-This class specifies the value and suit of a card. It also defines the human
-readable string form of a card.
+File:         Card.java
+Created:      2015/03/21
+Last Changed: 2015/04/30
+Author:      Scott Munro <scottnmunro@gmail.com>
+             Andrew Gordineer <gordineerandrew@gmail.com>
+
+Provides the idea of what a Card is to the game
 */
 public class Card{
 
+    /* all suits values that a card can take on */
     public enum Suit{
         HEART,DIAMOND,SPADE,CLUB,NOTASUIT
     }
 
+    /* all numeric values that a card can take on */
     public enum Value{
         ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING,
         NOTAVALUE
     }
+
 
     private Value value;
     private Suit suit;
@@ -90,6 +97,7 @@ public class Card{
         }
     }
 
+    // maps a human-readable character to a value
     public static Card.Value charToValue(char value){
         switch(value){
             case 'a':

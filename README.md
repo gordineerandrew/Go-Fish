@@ -9,7 +9,6 @@ A Project for M362K that will explore the use of conditional probability to play
     * AI Player - defines player behavior specific to AI players
 * Deck - defines behavior and state associated with the running game's deck of cards
 * Card - defines the state of a card
-* Book - defines the state of a book of cards
 
 # SPECIFICATIONS
 
@@ -20,6 +19,7 @@ A Project for M362K that will explore the use of conditional probability to play
 * select player to take the first turn at random
 ### Game Loop
 * specify the current players turn
+* display the probability of each of the player's choices being correct
 * choose card to look for
 * choose player to look for card from
 * confirm that match is appropriate

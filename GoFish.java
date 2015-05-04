@@ -1,22 +1,12 @@
 /*
-## GameDriver
-DONE * shuffle deck at start of game (shuffle 7 times for true shuffle)
-DONE * deal 7 cards to each player
-DONE * auto collect any books.
-DONE * select player to take the first turn at random
-### Game Loop
-* DONE specify the current players turn
-* STARTED choose card to look for
-* STARTED choose player to look for card from
-* DONE if selected correctly then book is created
-* gets to go another turn
-* else go fish
-* draw card from deck if there are any
-* END TURN
+File:         GoFish.java
+Created:      2015/03/21
+Last Changed: 2015/04/30
+Author:      Scott Munro <scottnmunro@gmail.com>
+             Andrew Gordineer <gordineerandrew@gmail.com>
 
-### MISC GAME LOOP INFO
-* during player turns go through each of these steps waiting for inputs
-* during AI turns, have minor delay so that player isn't overrun with information
+Manages the GoFish simulation, user input, and displaying information
+to the player
 */
 
 /* imported utilities */
@@ -50,6 +40,7 @@ public class GoFish{
     /* Global pool of cards still in play */
     private static int[] available;
 
+    /* the main game loop */
     public static void main(String[] args) throws IOException, InterruptedException{
 
         /* initialize beginning game state */
@@ -65,50 +56,75 @@ public class GoFish{
         boolean gameOver = false;
 
         while(!gameOver){
+            /* delay the output for readability */
             Thread.sleep(GameConstants.TIME_DELAY);
+
             /* BEGINNING PHASE */
+            /* select the player whose turn is next */
             Player currentPlayer = allPlayers.get(player_index++ % allPlayers.size());
             boolean turnOver = false;
+
             while(!turnOver && !gameOver){
+                /* Wait for the player to advance the game */
                 System.out.print("Press enter to continue the game.");
                 System.in.read();
                 clearScreen();
+
                 /* SELECTION PHASE */
                 currentPlayer.beginTurn();
                 System.out.println();
+                /* ask the current player who they would like to request a card from */
                 Player requestedPlayer = selectPlayer(currentPlayer);
+                /* ask the current player what card they would like to request */
                 Card.Value requestedCard = selectCard(currentPlayer);
+                /* tell the rest of the players that the current player has requested a specific card */
                 alertRequest(currentPlayer, requestedCard);
                 System.out.println(currentPlayer + " asked " + requestedPlayer + " for a(n) " + Card.valueToString(requestedCard));
 
                 /* ask the requestedPlayer for the requestedCard */
                 if(!currentPlayer.cardRequest(requestedCard, requestedPlayer)){
+                    /* the player has guessed incorrectly!... 
+                    alert the other players that the requested player did not have the card */
                     alertGoFish(requestedPlayer, requestedCard);
+                    /* player executes the GoFish action */
                     goFish(currentPlayer);
+                    /* end of turn */
                     turnOver = true;
                     System.out.println();
                 }
                 else{
-                    /* display */
+                    /* the player has guessed CORRECTLY!... */
                     System.out.println("\n" + requestedPlayer + " handed " + currentPlayer + " the " + Card.valueToString(requestedCard));
                     System.out.println(currentPlayer + " created a book of " + Card.valueToString(requestedCard) + "s.");
-                    /* update the player who gave away the card as well */
+                    /* inform the rest of the players that the requested 
+                    player no longer has the requested Card */
                     decrementAndZero(requestedPlayer, requestedCard);
                     System.out.println();
                 }
 
-                Thread.sleep(GameConstants.TIME_DELAY);
                 /* END PHASE */
+                /* delay output for readability */
+                Thread.sleep(GameConstants.TIME_DELAY);
                 /* update the win condition */
                 gameOver = isGameOver(deck.deckEmpty(), currentPlayer, requestedPlayer);
             }
         }
 
-
+        /* when the game is over determine who has won */
         determineWinner();
     }
 
+    /*
+    Initializes the game state:
+    this means:
+    - creating every player
+    - initializing the map used to track the 
+        probability of each requested card for each player...
+    - dealing out all of the cards
+     */
     public static void initGame() throws InterruptedException{
+        /* global variable used to inform other components that the game
+        is being initialized */
         initState = true;
 
         /* Prompt user for number of opponents to go against */
@@ -121,7 +137,6 @@ public class GoFish{
         }
         /*flush the input buffer of new line characters */
         userIn.nextLine();
-
         System.out.println();
 
         /* create the deck */
@@ -136,9 +151,7 @@ public class GoFish{
 
         /* generate human player */
         user = new HumanPlayer(GameConstants.PLAYER_NAME, deck);
-        /* update the longest name width when another player is created */
         GameConstants.LONGEST_NAME_WIDTH = Math.max(GameConstants.LONGEST_NAME_WIDTH, user.getName().length());
-        /* add to all player list to keep track of user */
         allPlayers.add(user);
 
         /* generate opponents */
@@ -159,12 +172,12 @@ public class GoFish{
         /* deal 7 cards to each players */
         dealCards();
 
-        /* Prints the deck after cards have been dealt. */
+        /* DEBUG: Prints the deck after cards have been dealt. */
         if(GameConstants.DEBUG){
             System.out.println(deck);
         }
-
         System.out.println("\n");
+
         /* Display all players information */
         user.displayState();
         if(GameConstants.DEBUG){
@@ -174,9 +187,14 @@ public class GoFish{
             }
         }
 
+        /* inform other components to begin normal operation */
         initState = false;
     }
 
+    /*
+    initializes the map used to track how many cards
+    in a players hand could possibly be a given card
+    */
     public static void initProbMap(){
         /* create an entry in the probability map for each player */
         probabilityInfoMap = new HashMap<Player, ArrayList<Integer>>(allPlayers.size());
@@ -193,8 +211,10 @@ public class GoFish{
 
     }
 
-    /* static routine that deals cards out to each player
-    at the beginning of each game */
+    /* 
+    static routine that deals cards out to each player
+    at the beginning of each game
+    */
     public static void dealCards() throws InterruptedException{
         for(Player p: allPlayers){
             for(int i = 0; i < GameConstants.STARTING_HAND; i++){
@@ -202,14 +222,15 @@ public class GoFish{
                 if(p instanceof HumanPlayer)
                     Thread.sleep(GameConstants.TIME_DELAY/2);
             }
-
         }
     }
 
 
-    /* chooses the starting player by having each player
+    /* 
+    chooses the starting player by having each player
     roll a random die. The player with the highest roll
-    is the player who starts */
+    is the player who starts 
+    */
     public static int chooseStartingPlayer() throws InterruptedException{
         /* keeps track of the largest roll */
         int max_roll = 0;
@@ -219,6 +240,7 @@ public class GoFish{
         Random r = new Random();
 
         System.out.println("\n\nRolling 20 sided dice to decide starting player...");
+
         /* each player will roll a dice
         the player with the highest dice roll will go first */
         for(int i = 0; i < allPlayers.size(); i++){
@@ -239,12 +261,24 @@ public class GoFish{
 
         Thread.sleep(GameConstants.TIME_DELAY);
 
+        /* sanity check to ensure that a starting player was set */
         assert starting_player != -1;
         return starting_player;
     }
 
-    /* method to verify and allow the currentPlayer to request a card from another player */
+    /* 
+    method to verify and allow the currentPlayer 
+    to request a card from another player 
+
+    inputs:
+    currentPlayer - the current player who must select another player to request from
+
+    returns:
+    the player who is selected 
+    */
     public static Player selectPlayer(Player currentPlayer){
+
+        /* HUMAN BEHAVIOR */
         if(currentPlayer instanceof HumanPlayer){
             /* prompt user for player selection */
             System.out.println("Which player would you like to request a card from? ");
@@ -270,16 +304,29 @@ public class GoFish{
             return allPlayers.get(request);
         }
 
+        /* AI BEHAVIOR */
         else{
-            /* PLACEHOLDER AI Selects random player */
+            /* AI Selects random player */
             Random r = new Random();
             Player playerChoice;
+            /* randomly select players until a player that is not 
+            the current player is selected */
             while((playerChoice = allPlayers.get(r.nextInt(allPlayers.size()))) == currentPlayer){}
 
             return playerChoice;
         }
     }
 
+    /* 
+    method to verify and allow the current player 
+    to select a card to request 
+
+    inputs:
+    currentPlayer - the player who must select a card from their hand to request
+
+    returns:
+    the value of the card they select
+    */
     public static Card.Value selectCard(Player currentPlayer){
         /* if the current player is a human... */
         if(currentPlayer instanceof HumanPlayer){
@@ -300,26 +347,46 @@ public class GoFish{
             System.out.println();
             return request;
         }
-        /* PLACEHOLDER edit this for the computer player */
         else{
-            /* PLACEHOLDER AI Selects a random card */
+            /* AI Selects a random card */
             Random r = new Random();
             Card cardChoice;
+            /* randomly pick cards until a card that is in 
+            the current AI player's hand is selected */
             while((cardChoice = currentPlayer.getCard(Card.intToValue(r.nextInt(13) + 1))) == null){}
             return cardChoice.getValue();
         }
 
     }
 
+    /* 
+    a function for updating the probability map when a book is created
+    specifically at the beginning of the game during initialization 
+
+    inputs:
+    p - the player who created the book
+    value - the value of the book
+    drewCard - was the book created from drawing a card?
+    */
     public static void initialAlertBook(Player p, Card.Value value, boolean drewCard){
         /* decrement available pool of cards */
         available[value.ordinal()]-=2;
+        /* decrement the number of cards in a players 
+        hand to account for the new book */
         decrementProbabilities(p);
         if(drewCard){
             decrementProbabilities(p);
         }
     }
 
+    /* 
+    updates the probability map when a book is created 
+
+    inputs:
+    p - the player who created the book
+    value - the value of the book
+    drewCard - was the book created from drawing a card?
+    */
     public static void alertBook(Player p, Card.Value value, boolean drewCard){
         /* decrement available pool of cards */
         available[value.ordinal()]-=2;
@@ -332,37 +399,75 @@ public class GoFish{
 
     }
 
-    /*
-    initialize map to all zeros
-    decremeent inside of initialAlertBook
-    increment inside of drawCard
-    */
+    /* 
+    a function that handles when a player must go fish 
 
+    inputs:
+    p - the player who must "GoFish"
+    */
     public static void goFish(Player p){
-        /* if they don't have it GO FISH */
+        /* keep track of their old score for display purposes */
         int oldScore = p.getScore();
         System.out.println("\nGO-FISH!");
         Card newCard = p.drawCard();
+        /* if they created a book (score changed) display that */
         if(oldScore != p.getScore()){
             System.out.println(p + " created a book of " + Card.valueToString(newCard.getValue()) + "s.");
         }
         System.out.println("TURN OVER");
     }
 
+    /*
+    a function to alert all players when one player does not have a card
+    as evidenced by a GoFish
+
+    inputs:
+    r - the requestedPlayer who did not have a card
+    value - the card value they did not have
+    */
     public static void alertGoFish(Player r, Card.Value value){
         probabilityInfoMap.get(r).set(value.ordinal(), 0);
     }
 
+    /* 
+    a function to alert the other players that a player has requested
+    another player for a card. This is done to let other players know
+    that the requestingPlayer 100% has a card
+
+    inputs:
+    p - the player who is requested a card
+    value - the requested card 
+    */
+    public static void alertRequest(Player p, Card.Value value){
+        probabilityInfoMap.get(p).set(value.ordinal(), 1000);
+    }
+
+    /* 
+    used to update the probability map to account for new
+    cards coming into a players hand 
+
+    inputs: 
+    p - the player who has gained a card
+    */
     public static void incrementProbabilities(Player p){
         ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
         for(int i = 0; i < probabilityChart.size(); i++){
+            /* increment the number of cards that could a given card in a players hand by 1 */
             probabilityChart.set(i, probabilityChart.get(i)+1);
+            /* any card that has a nonpositive probability is incremented to 1 */
             if(probabilityChart.get(i) < 0){
                 probabilityChart.set(i, 1);
             }
         }
     }
 
+    /*
+    used to update the probability map to account for a player
+    losing a card
+
+    inputs:
+    p - the player who has lost a card 
+    */
     public static void decrementProbabilities(Player p){
         ArrayList<Integer> probabilityChart = probabilityInfoMap.get(p);
         for(int i = 0; i < probabilityChart.size(); i++){
@@ -371,22 +476,47 @@ public class GoFish{
         }
     }
 
+    /* 
+    used to a update a probability to account for a lost card as well
+    as a card that is definitely not in the players hand anymore 
+    
+    inputs:
+    p - the player who has lost a card and definitely does not have a card
+    value - the value of the card that the player p definitely does not have
+    */
     public static void decrementAndZero(Player p, Card.Value value){
         decrementProbabilities(p);
         /* zero out the card's value */
         probabilityInfoMap.get(p).set(value.ordinal(), 0);
     }
 
+    /*
+    a function to decide if the game is over 
+
+    inputs:
+    emptyDeck - is the deck empty?
+    current - the player whose turn is ending
+    other - the player who was interacted with by the current player
+
+    returns:
+    whether the gmae is over or not 
+    */
     public static boolean isGameOver(boolean emptyDeck, Player current, Player other){
         boolean gameOver = false;
+
+        /* is the deck empty */
         if(emptyDeck){
             System.out.println("Deck is empty!");
             gameOver = true;
         }
+
+        /* is the current player's hand empty?*/
         else if(current.handEmpty()){
             System.out.printf("%s's hand is empty!\n", current.getName());
             gameOver = true;
         }
+
+        /* is the interacted-with player's hand empty? */
         else if(other.handEmpty()){
             System.out.printf("%s's hand is empty!\n", other.getName());
             gameOver = true;
@@ -398,6 +528,12 @@ public class GoFish{
         return gameOver;
     }
 
+    /* 
+    a routine used to determine which player has won the game
+
+    done by simply iterating over the list and finding the player
+    with the highest score 
+    */
     public static void determineWinner(){
         Player winner = null;
         int maxScore = 0;
@@ -426,6 +562,10 @@ public class GoFish{
         System.out.printf("%s %s\n", outcome, user.getName());
     }
 
+    /* 
+    Displays all of the probabilities to the human player
+    so that they may make the most effective guess possible 
+    */
     public static void getProbabilities(){
         /* Starting at 1 to not include the human player */
         for(int i = 1; i < allPlayers.size(); i++){
@@ -439,29 +579,64 @@ public class GoFish{
         }
     }
 
+    /* 
+    Calculates the probability for a requested card form a requested player using what
+    is known about the current game state: how many unknown cards there are, how many
+    unknown cards are in the requested players hand etc.
+
+    Basic formula...
+    X = the number of cards in the requested Player's hand that could be the requestedCard
+    Y = total unknown cards in the game that could be the requested card
+    Z = How many of the requestedCard are remaining in the game that are not in your hand
+
+    (X/Y) * Z
+
+    inputs:
+    requestedPlayer - the player who you are calculating the probabilty of having "card" card
+    card - the card to calculate probabilities for
+    */
     public static double calculateProbability(Player requestedPlayer, Card.Value card){
+        /* keep track of the unknown number of cards in all hands */
         int unknownInHands = 0;
+        /* how many of "card" are remaining */
         int numRemaining = available[card.ordinal()];
+        /* how many unknown cards in requestedPlayer's hand could be "card" */
         int unknownInRequestedHand = 0;
+
         for(int i = 1; i < allPlayers.size(); i++){
             Player currentPlayer = allPlayers.get(i);
             int possibleNumInHand = probabilityInfoMap.get(currentPlayer).get(card.ordinal());
+
+            /* normal case: the player has some nonzero probability of having the requested card */ 
             if(possibleNumInHand <= GameConstants.GUARANTEED_CARD || currentPlayer == requestedPlayer)
                 unknownInHands += possibleNumInHand;
+            
+            /* special case: there is no way the currentPlayer has the specified card 
+            the human player has 1 of the cards and the requestdPlayer has the other so this third player
+            cannot have it*/
             else if(numRemaining == 2)
                 return 0;
-            if(currentPlayer == requestedPlayer){
+
+            /* mark unknown in requested player's hand */
+            if(currentPlayer == requestedPlayer)
                 unknownInRequestedHand = possibleNumInHand;
-            }
+            
         }
-        /* Return 0 if all cards are known not to be card. Fixes NaN issue */
+
+        /* return 100 if the player is guaranteed to have this card */
         if(unknownInRequestedHand > GameConstants.GUARANTEED_CARD)
             return 100;
+
+        /* Return 0 if all cards are known not to be card. Fixes NaN issue */
         if(unknownInHands == 0)
             return 0;
+
+        /* calculate the probability */
         int totalUnknown = unknownInHands + deck.size();
         double probability = (100.0*(numRemaining-1))/totalUnknown;
         probability *= unknownInRequestedHand;
+
+        /* DEBUG INFO */
         if(GameConstants.DEBUG){
             System.out.println("\nunknownInHands = " + unknownInHands);
             System.out.println("TotalUnknown = " + totalUnknown);
@@ -469,6 +644,7 @@ public class GoFish{
             System.out.println("numRemaining = " + (numRemaining-1));
             System.out.println();
         }
+
         return probability;
     }
 
@@ -481,10 +657,7 @@ public class GoFish{
         System.out.printf("\n");
     }
 
-    public static void alertRequest(Player p, Card.Value value){
-        probabilityInfoMap.get(p).set(value.ordinal(), 1000);
-    }
-
+    /* auxillary function to clear the screen for formatting purposes */
     public static void clearScreen(){
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
