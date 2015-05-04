@@ -14,7 +14,7 @@ public class HeadlessLogger{
 			GameConstants.LOGFILE = args[1];
 		}
 
-		// GameConstants.HEADLESS = true;
+		GameConstants.HEADLESS = true;
 		// GameConstants.LOG = true;
 		GameConstants.AUTO = true;
 

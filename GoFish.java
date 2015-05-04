@@ -132,18 +132,25 @@ public class GoFish{
         initState = true;
 
         /* Prompt user for number of opponents to go against */
-       if(!GameConstants.HEADLESS) System.out.print("How many opponents (1-3)? ");
+        if(!GameConstants.HEADLESS) System.out.print("How many opponents (1-3)? ");
         int numOpponents;
         /* while the player inputs a number not between 0 and the max prompt for another number */
-        while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
-           if(!GameConstants.HEADLESS){
-                System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
-                System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
-           } 
+        if(!GameConstants.AUTO){
+            while(!((numOpponents = userIn.nextInt()) > 0 && numOpponents <= GameConstants.MAX_OPPONENTS)){
+               if(!GameConstants.HEADLESS){
+                    System.out.println("Number of Opponents must be between 0 and " + GameConstants.MAX_OPPONENTS);
+                    System.out.print("How many opponents (1 - " + GameConstants.MAX_OPPONENTS + ")? ");
+               } 
+            }
+
+            /*flush the input buffer of new line characters */
+            userIn.nextLine();
+            if(!GameConstants.HEADLESS) System.out.println();
         }
-        /*flush the input buffer of new line characters */
-        userIn.nextLine();
-       if(!GameConstants.HEADLESS) System.out.println();
+
+        else{
+            numOpponents = 3;
+        }
 
         /* create the deck */
         deck = new Deck();
