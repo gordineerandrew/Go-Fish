@@ -137,16 +137,16 @@ Many people enjoy playing the card game Go Fish. Generally, the game is played b
 \section{Logistics}
 \label{P:2}
 
-This project was developed using the Java programming lanuage and packages defined with the standard Java 7 SDK. Java was used for it's ability to rapidly prototype the GoFish simulation and to quickly develop simple object oriented designs. While other languages such as C can make more efficient use of the processor (which improves performance) and other languages such as Python or R are used in scientific fields, Java was chosen because the simulation is fairly lightweight and the ability to write code quickly outweighed the advantages of other languages. 
+This project was developed using the Java programming lanuage and packages defined with the standard Java 7 SDK. Java was used for it's ability to rapidly prototype the GoFish simulation and to quickly develop simple object oriented designs. While other languages such as C can make more efficient use of the processor (which improves performance) and other languages such as Python or R are used in scientific fields, Java was chosen because the simulation is fairly lightweight and the ability to quickly write code outweighed the advantages of other languages. 
 
 \section{GoFish Rules}
 \label{P:3}
-Because Go Fish is not explicitly defined anywhere, a set of guidelines and rules for our particular simulation of Go Fish must be established. 
+Because Go Fish is not explicitly defined anywhere, we defined a set of guidelines and rules for our particular simulation.
 
 \begin{itemize}
 \item At the start of the game, each player is dealt seven cards, creating books as needed.
 \item The game cycles in turns between each player until either a player loses all cards from their hand, or the deck is empty.
-\item Each turn consists of a player requesting a card in their hand from an opposing player. If that player has the card, then the asking player is given that card to form a book, and that player gains a point. If the requested player does not have the card, then the asking player must “Go Fish!” and draw a card, ending their turn.
+\item Each turn consists of a player requesting a card in their hand from an opposing player. If that opposing player has the card, then the asking player is given that card to form a book and player gains a point. If the requested player does not have the card, then the asking player must “Go Fish!” and draw a card, ending their turn.
 \item Books are comprised of a pair of cards with identical values (i.e. pair of two’s, ace’s etc). 
 \item When the game is over a winner is determined by finding the player with either the maximum amount of books or, in the event of a tie, finding the player with no cards left in their hand.
 \end{itemize}
@@ -188,7 +188,7 @@ The probability is calculated by using a combination of what is known about the 
 To appropriately simulate GoFish, multiple players are needed. To simplify the development of the simulation environment, the extra players are implemented as AI-Players instead of as other Human Players. Whereas the human player has to manually select a player and a card to ask for, the AI-Players randomly choose one of their opponents and a random card that exists in their hand during each of their turns. Aside from just acting as an extra player, these AI-Players act as a contrast to how the Human Player selects their cards. The Human Player can make educated guesses, but the AI-Player makes naive, random guesses that don’t adapt to the new information that is made available to every player as the game progresses. 
 
 \subsection{Extension} 
-This project could be extended in a few interesting ways. A better user interface could be developed that makes use of Graphical components. A variety of difficulties of AI could be created, taking advantage of the probability calculations being available and evolving their behavior based on the current state of the game.
+This project could be extended in a few interesting ways. A better user interface could be developed that makes use of graphical components. A variety of difficulties of AI could be created, taking advantage of the probability calculations being available and evolving their behavior based on the current state of the game.
 
 \section{Experiment}
 \label{S:2}
