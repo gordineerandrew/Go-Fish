@@ -99,16 +99,15 @@ value, the total number of unknown cards in the game that could be the
 specified value, and the number of cards of that value remaining in the
 game.
 
-Formula ($R$ = player being asked, $C$ = card being asked for)
+Formula (R = player being asked, C = card being asked for)
 
-$X$ = the number of cards in the R’s hand that could be C
+X = the number of cards in the R’s hand that could be C
 
-$Y$ = total unknown cards in the game that could be C
+Y = total unknown cards in the game that could be C
 
-$Z$ = Number of C remaining in the game and not in your hand
+Z = Number of C remaining in the game and not in your hand
 
-$$\label{Probability}
-\mbox{Pr(C in R’s Hand)} = \frac{X}Y * Z$$
+Pr(C in R’s Hand) = (X/Y) * Z
 
 Computer Simulated Players
 --------------------------
@@ -159,14 +158,16 @@ each other.
 Data
 ----
 
-  Naive Strategy           Educated Strategy
-  ------------------------ -----------------------
-  **$\mu$** = 28.604       **$\mu$** = 67.0099
-  **$\sigma$** = 0.45955   **$\sigma$** = 0.4698
+  Naive Strategy          
+  ------------------------
+  mean = 28.604      
+  std deviation = 0.45955
 
-**$\mu$** = Mean
-
-**$\sigma$** = Standard Deviation
+  
+  Educated Strategy
+  -----------------------
+  mean = 67.0099
+  std deviation = 0.4698
 
   ----------------------------------- ------------------------------------
    ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/dumbCurve.png)   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/smartCurve.png)
