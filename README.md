@@ -76,7 +76,7 @@ input.
 Basic Control Flow Diagram
 --------------------------
 
-![image](../images/GoFishControlFlow.png)
+![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/GoFishControlFlow.png)
 
 How Probability is Tracked
 --------------------------
@@ -169,7 +169,7 @@ Data
 **$\sigma$** = Standard Deviation
 
   ----------------------------------- ------------------------------------
-   ![image](../images/dumbCurve.png)   ![image](../images/smartCurve.png)
+   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/dumbCurve.png)   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/smartCurve.png)
   ----------------------------------- ------------------------------------
 
 Results
