@@ -159,15 +159,14 @@ Data
 ----
 
   Naive Strategy          
-  ------------------------
-  
+------------------   
   mean = 28.604      
   
   std deviation = 0.45955
 
   
   Educated Strategy
-  -----------------------
+--------------------
   mean = 67.0099
   
   std deviation = 0.4698
