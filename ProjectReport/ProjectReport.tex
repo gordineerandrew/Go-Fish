@@ -38,6 +38,7 @@
 \usepackage{amssymb}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
+\usepackage{hyperref}
 
 %% The lineno packages adds line numbers. Start line numbering with
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
@@ -73,7 +74,7 @@
 
 %% Title, authors and addresses
 
-\title{Unnecessarily Complicated Research Title}
+\title{Go Fish and Probabilities}
 
 %% use the tnoteref command within \title for footnotes;
 %% use the tnotetext command for the associated footnote;
@@ -100,23 +101,15 @@
 %% \address[label1]{<address>}
 %% \address[label2]{<address>}
 
-\author{John Smith}
+\author{Scott Munro}
+\author{Andrew Gordineer}
 
-\address{California, United States}
+\address{Austin, TX, United States}
 
 \begin{abstract}
 %% Text of abstract
-Suspendisse potenti. Suspendisse quis sem elit, et mattis nisl. Phasellus consequat erat eu velit rhoncus non pharetra neque auctor. Phasellus eu lacus quam. Ut ipsum dolor, euismod aliquam congue sed, lobortis et orci. Mauris eget velit id arcu ultricies auctor in eget dolor. Pellentesque suscipit adipiscing sem, imperdiet laoreet dolor elementum ut. Mauris condimentum est sed velit lacinia placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam diam metus, pharetra vitae euismod sed, placerat ultrices eros. Aliquam tincidunt dapibus venenatis. In interdum tellus nec justo accumsan aliquam. Nulla sit amet massa augue.
+Many people enjoy playing the card game Go Fish. Generally, the game is played by randomly guessing what cards a player’s opponents may or may not have. We set out to develop a system that uses probability to help player’s make better educated guesses. Using these educated guesses, we propose that a player's average win rate can be increased. 
 \end{abstract}
-
-\begin{keyword}
-Science \sep Publication \sep Complicated
-%% keywords here, in the form: keyword \sep keyword
-
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
-
-\end{keyword}
 
 \end{frontmatter}
 
@@ -126,67 +119,126 @@ Science \sep Publication \sep Complicated
 \linenumbers
 
 %% main text
-\section{The First Section}
-\label{S:1}
+\section{Important Resources and Sources}
+\label{P:1}
+\noindent Project Source Code: 
 
-Maecenas \cite{Smith:2012qr} fermentum \cite{Smith:2013jd} urna ac sapien tincidunt lobortis. Nunc feugiat faucibus varius. Ut sed purus nunc. Ut eget eros quis lectus mollis pharetra ut in tellus. Pellentesque ultricies velit sed orci pharetra et fermentum lacus imperdiet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse commodo ultrices mauris, condimentum hendrerit lorem condimentum et. Pellentesque urna augue, semper et rutrum ac, consequat id quam. Proin lacinia aliquet justo, ut suscipit massa commodo sit amet. Proin vehicula nibh nec mauris tempor interdum. Donec orci ante, tempor a viverra vel, volutpat sed orci.
+\noindent \url{http://github.com/gordineerandrew/Go-Fish}
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque quis interdum velit. Nulla tincidunt sem quis nisi molestie nec hendrerit nulla interdum. Nunc at lectus at neque dapibus dapibus sit amet in massa. Nam ut nisl in diam consectetur dignissim. Sed lacinia diam id nunc suscipit vitae semper lorem semper. In vehicula velit at tortor fringilla elementum aliquam erat blandit. Donec pretium libero et neque vehicula blandit. Curabitur consequat interdum sem at ultrices. Sed at tincidunt metus. Etiam vulputate, lacus eget fermentum posuere, ante mi dignissim augue, et ultrices felis tortor sed nisl.
+\noindent Mean and Std Deviation Tools: 
+
+\noindent \url{https://www.easycalculation.com/statistics/standard-deviation.php}
+
+
+\noindent Normal Curve Generator: 
+
+\noindent\url{http://davidmlane.com/hyperstat/z_table.html}
+
+\section{Logistics}
+\label{P:2}
+
+This project was developed using the Java programming lanuage and packages defined with the standard Java 7 SDK. Java was used for it's ability to rapidly prototype the GoFish simulation and to quickly develop simple object oriented designs. While other languages such as C can make more efficient use of the processor (which improves performance) and other languages such as Python or R are used in scientific fields, Java was chosen because the simulation is fairly lightweight and the ability to write code quickly outweighed the advantages of other languages. 
+
+\section{GoFish Rules}
+\label{P:3}
+Because Go Fish is not explicitly defined anywhere, a set of guidelines and rules for our particular simulation of Go Fish must be established. 
 
 \begin{itemize}
-\item Bullet point one
-\item Bullet point two
+\item At the start of the game, each player is dealt seven cards, creating books as needed.
+\item The game cycles in turns between each player until either a player loses all cards from their hand, or the deck is empty.
+\item Each turn consists of a player requesting a card in their hand from an opposing player. If that player has the card, then the asking player is given that card to form a book, and that player gains a point. If the requested player does not have the card, then the asking player must “Go Fish!” and draw a card, ending their turn.
+\item Books are comprised of a pair of cards with identical values (i.e. pair of two’s, ace’s etc). 
+\item When the game is over a winner is determined by finding the player with either the maximum amount of books or, in the event of a tie, finding the player with no cards left in their hand.
 \end{itemize}
 
-\begin{enumerate}
-\item Numbered list item one
-\item Numbered list item two
-\end{enumerate}
+\section{What We Accomplished}
+\label{S:1}
 
-\subsection{Subsection One}
+We created a program that simulates the game of Go Fish, displaying the probabilities of each value of card for each of the players opponents. These probabilities are constantly updated based on events occurring in the game (i.e. Asking for cards, being asked for a card, handing over a card, making a book, and denying having a value). The AIPlayers play the game by randomly asking one of their opponents for a card that is currently in their hand. This version of AI is random, but representative of how people generally play GoFish, disregarding information that is gained through the game’s progression. A headless, logging mode was also established so that multiple iterations of the simulation could be run and recorded without needing explicit human input.
 
-Quisque elit ipsum, porttitor et imperdiet in, facilisis ac diam. Nunc facilisis interdum felis eget tincidunt. In condimentum fermentum leo, non consequat leo imperdiet pharetra. Fusce ac massa ipsum, vel convallis diam. Quisque eget turpis felis. Curabitur posuere, risus eu placerat porttitor, magna metus mollis ipsum, eu volutpat nisl erat ac justo. Nullam semper, mi at iaculis viverra, nunc velit iaculis nunc, eu tempor ligula eros in nulla. Aenean dapibus eleifend convallis. Cras ut libero tellus. Integer mollis eros eget risus malesuada fringilla mattis leo facilisis. Etiam interdum turpis eget odio ultricies sed convallis magna accumsan. Morbi in leo a mauris sollicitudin molestie at non nisl.
+\subsection{Basic Control Flow Diagram}
+\includegraphics[scale=0.6]{../images/GoFishControlFlow.png}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\hline
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\hline
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\hline
-\end{tabular}
-\caption{Table caption}
-\end{table}
+\subsection{How Probability is Tracked}
 
-\subsection{Subsection Two}
+The probability for each value of card is tracked by keeping a running count of the number of cards in each of the players opponent's hands known to not be that value. This is accomplished by incrementing the count each time a player gains a card (i.e. draws a card), decrementing the count whenever a player loses a card (i.e. makes a book or gives up a card to an opponent), and zeroing a card’s value if the player definitely doesn’t have that value (i.e. they have just formed a book or denied a request for the value). 
 
-Donec eget ligula venenatis est posuere eleifend in sit amet diam. Vestibulum sollicitudin mauris ac augue blandit ultricies. Nulla facilisi. Etiam ut turpis nunc. Praesent leo orci, tincidunt vitae feugiat eu, feugiat a massa. Duis mauris ipsum, tempor vel condimentum nec, suscipit non mi. Fusce quis urna dictum felis posuere sagittis ac sit amet erat. In in ultrices lectus. Nulla vitae ipsum lectus, a gravida erat. Etiam quam nisl, blandit ut porta in, accumsan a nibh. Phasellus sodales euismod dolor sit amet elementum. Phasellus varius placerat erat, nec gravida libero pellentesque id. Fusce nisi ante, euismod nec cursus at, suscipit a enim. Nulla facilisi.
+\subsection{How the Probability is Calculated}
 
-%\begin{figure}[h]
-%\centering\includegraphics[width=0.4\linewidth]{placeholder}
-%\caption{Figure caption}
-%\end{figure}
+The probability is calculated by using a combination of what is known about the unknown cards in a player’s hand that could be a specified value, the total number of unknown cards in the game that could be the specified value, and the number of cards of that value remaining in the game.
+\vspace{5 mm}
 
-Integer risus dui, condimentum et gravida vitae, adipiscing et enim. Aliquam erat volutpat. Pellentesque diam sapien, egestas eget gravida ut, tempor eu nulla. Vestibulum mollis pretium lacus eget venenatis. Fusce gravida nisl quis est molestie eu luctus ipsum pretium. Maecenas non eros lorem, vel adipiscing odio. Etiam dolor risus, mattis in pellentesque id, pellentesque eu nibh. Mauris nec ante at orci ultricies placerat ac non massa. Aenean imperdiet, ante eu sollicitudin vestibulum, dolor felis dapibus arcu, sit amet fermentum urna nibh sit amet mauris. Suspendisse adipiscing mollis dolor quis lobortis.
+\noindent Formula ($R$ = player being asked, $C$ = card being asked for)
+
+\noindent$X$ = the number of cards in the R's hand that could be C
+
+\noindent$Y$ = total unknown cards in the game that could be C
+
+\noindent$Z$ = Number of C remaining in the game and not in your hand
+
 
 \begin{equation}
-\label{eq:emc}
-e = mc^2
+\label{Probability}
+\mbox{Pr(C in R’s Hand)} = \frac{X}Y * Z
 \end{equation}
 
-\section{The Second Section}
+
+\subsection{Computer Simulated Players}
+
+To appropriately simulate GoFish, multiple players are needed. To simplify the development of the simulation environment, the extra players are implemented as AI-Players instead of as other Human Players. Whereas the human player has to manually select a player and a card to ask for, the AI-Players randomly choose one of their opponents and a random card that exists in their hand during each of their turns. Aside from just acting as an extra player, these AI-Players act as a contrast to how the Human Player selects their cards. The Human Player can make educated guesses, but the AI-Player makes naive, random guesses that don’t adapt to the new information that is made available to every player as the game progresses. 
+
+\subsection{Extension} 
+This project could be extended in a few interesting ways. A better user interface could be developed that makes use of Graphical components. A variety of difficulties of AI could be created, taking advantage of the probability calculations being available and evolving their behavior based on the current state of the game.
+
+\section{Experiment}
 \label{S:2}
+\subsection{Overview}
+It can be accepted with common sense that having access to more information would positively affect a player's win rate, but it is an interesting challenge to see exactly how much it can benefit a player.
 
-Reference to Section \ref{S:1}. Etiam congue sollicitudin diam non porttitor. Etiam turpis nulla, auctor a pretium non, luctus quis ipsum. Fusce pretium gravida libero non accumsan. Donec eget augue ut nulla placerat hendrerit ac ut mi. Phasellus euismod ornare mollis. Proin tempus fringilla ultricies. Donec pretium feugiat libero quis convallis. Nam interdum ante sed magna congue eu semper tellus sagittis. Curabitur eu augue elit.
+\subsection{Procedure}
+To compare and contrast the naive strategy to our strategy with educated guesses, both needed to be tested in a standard way. The standard test we designed was to run the GoFish simulation 10000 times and get the percentage of wins. This was repeated 1000 times and the results of these trials were used to generate a reliable mean and standard deviation. In turn these measures of central tendency can be used to form a normal curve to evaluate each strategy in comparison to each other.
 
-Aenean eleifend purus et massa consequat facilisis. Etiam volutpat placerat dignissim. Ut nec nibh nulla. Aliquam erat volutpat. Nam at massa velit, eu malesuada augue. Maecenas sit amet nunc mauris. Maecenas eu ligula quis turpis molestie elementum nec at est. Sed adipiscing neque ac sapien viverra sit amet vestibulum arcu rhoncus.
+\subsection{Data}
+\begin{center}
+	\begin{tabular}{l | l}
+		Naive Strategy & Educated Strategy \\ \hline
+		\textbf{$\mu$} = 28.604 & \textbf{$\mu$} = 67.0099  \\
+		\textbf{$\sigma$} = 0.45955 & \textbf{$\sigma$} = 0.4698 \\ 
+	\end{tabular}
 
-Vivamus pharetra nibh in orci euismod congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque lacus diam, congue vel laoreet id, iaculis eu sapien. In id risus ac leo pellentesque pellentesque et in dui. Etiam tincidunt quam ut ante vestibulum ultricies. Nam at rutrum lectus. Aenean non justo tortor, nec mattis justo. Aliquam erat volutpat. Nullam ac viverra augue. In tempus venenatis nibh quis semper. Maecenas ac nisl eu ligula dictum lobortis. Sed lacus ante, tempor eu dictum eu, accumsan in velit. Integer accumsan convallis porttitor. Maecenas pretium tincidunt metus sit amet gravida. Maecenas pretium blandit felis, ac interdum ante semper sed.
+	\vspace{4 mm}
 
-In auctor ultrices elit, vel feugiat ligula aliquam sed. Curabitur aliquam elit sed dui rhoncus consectetur. Cras elit ipsum, lobortis a tempor at, viverra vitae mi. Cras sed urna sed eros bibendum faucibus. Morbi vel leo orci, vel faucibus orci. Vivamus urna nisl, sodales vitae posuere in, tempus vel tellus. Donec magna est, luctus non commodo sit amet, placerat et enim.
+	\textbf{$\mu$} = Mean
+
+	\textbf{$\sigma$} = Standard Deviation
+
+	\vspace{4 mm}
+
+	\begin{tabular}{c c}
+		\includegraphics[scale=0.37]{../images/dumbCurve.png} & \includegraphics[scale=0.37]{../images/smartCurve.png} \\
+	\end{tabular}
+
+\end{center}
+
+\subsection{Results}
+
+The results are clear. Using the educated strategy with probability awarness results in winning twice as many rounds of Go Fish as using the naive strategy. Furthermore, the standard deviation of both strategies is so miniscule that there is virtually no chance that the naive strategy will ever deviate anywhere near the results of the educated strategy. The experiment has been proven successful.
+
+\section{Some Challenges During Development}
+\label{S:3}
+
+\subsection{Learning about Go Fish}
+Go Fish is not explicitly defined and is riddled with house rules, variations, and inconsistencies. To develop a proper simulation, a specific subset of rules had to be established and this set of rules needed to cohesively work with our project.
+
+\subsection{Tracking the probability}
+Giving different portions of our code the correct access to the correct information proved troublesome when we began trying to work from a strictly object oriented programming paradigm. A simpler, more imperative form of object oriented programming was adopted to fit our project. 
+
+\subsection{Calculating Probability}
+Determining a method of calculating the probabilities of each of the card values, without having to compute very intense functions proved to be difficult. Issues concerning whether or not the probabilities were to be distributed among opponents and how to consider a multitude of unknown cards made the problem difficult to conceptualize. 
+
+\subsection{Designing the user interface}
+Displaying the appropriate information to the user in an organized and readable manner proved difficult within a text-based interface. A lot of time was spent defining formatting standards and input delays so that a player could appropriately digest all of the information that would need to be presented to them.
+
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections

@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Important Resources and Sources}{}% 1
+\BOOKMARK [1][-]{section.2}{Logistics}{}% 2
+\BOOKMARK [1][-]{section.3}{GoFish Rules}{}% 3
+\BOOKMARK [1][-]{section.4}{What We Accomplished}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Basic Control Flow Diagram}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{How Probability is Tracked}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{How the Probability is Calculated}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Computer Simulated Players}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Extension}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Experiment}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Overview}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Procedure}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.3}{Data}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.4}{Results}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Some Challenges During Development}{}% 15
+\BOOKMARK [2][-]{subsection.6.1}{Learning about Go Fish}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.2}{Tracking the probability}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.3}{Calculating Probability}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.4}{Designing the user interface}{section.6}% 19
