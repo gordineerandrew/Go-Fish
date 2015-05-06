@@ -1,0 +1,2001 @@
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 8	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 0	   NPC-1: 7	   NPC-2: 0	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 0	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 6	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 7	   NPC-3: 7	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 0	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 8	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 6	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 8	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 0	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 7	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 0	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 8	   NPC-3: 1	
+
+WIN SCORES	  Player: 4	   NPC-1: 0	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 2	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 6	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 0	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 7	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 10	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 8	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 9	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 2	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 0	   NPC-1: 1	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 9	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 1	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 8	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 3	   NPC-2: 5	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 8	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 8	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 0	   NPC-1: 2	   NPC-2: 5	   NPC-3: 2	
+
+WIN SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 3	   NPC-3: 1	
+
+WIN SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 9	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 2	   NPC-3: 3	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 7	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 0	   NPC-2: 7	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 8	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 7	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 7	   NPC-3: 5	
+
+WIN SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 3	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 0	   NPC-2: 4	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 7	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 9	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 0	   NPC-1: 3	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 8	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 7	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 7	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 7	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 2	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 8	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 0	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 0	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 0	   NPC-3: 2	
+
+WIN SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 6	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 0	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 8	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 2	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 0	   NPC-1: 2	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 4	   NPC-3: 9	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 5	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 7	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 3	   NPC-3: 0	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 1	   NPC-3: 4	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 7	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 7	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 1	
+
+WIN SCORES	  Player: 8	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 7	   NPC-1: 7	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 0	   NPC-3: 0	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 5	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 0	   NPC-1: 2	   NPC-2: 5	   NPC-3: 0	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 1	   NPC-2: 2	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 6	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 5	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 8	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 2	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 9	
+
+WIN SCORES	  Player: 8	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 4	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 2	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 9	   NPC-1: 1	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 6	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 7	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 8	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 0	   NPC-3: 0	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 5	   NPC-3: 0	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 2	   NPC-3: 9	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 7	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 1	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 1	   NPC-3: 0	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 1	   NPC-3: 4	
+
+WIN SCORES	  Player: 8	   NPC-1: 2	   NPC-2: 2	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 6	   NPC-3: 2	
+
+WIN SCORES	  Player: 8	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 7	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 1	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 7	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 0	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 8	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 3	   NPC-3: 8	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 1	   NPC-2: 0	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 2	   NPC-3: 7	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 0	   NPC-2: 0	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 7	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 8	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 8	
+
+LOSE SCORES	  Player: 6	   NPC-1: 8	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 3	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 8	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 0	   NPC-1: 6	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 4	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 4	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 1	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 8	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 7	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 8	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 1	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 0	   NPC-2: 6	   NPC-3: 0	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 3	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 6	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 8	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 8	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 9	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 4	   NPC-3: 8	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 8	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 1	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 8	
+
+LOSE SCORES	  Player: 1	   NPC-1: 0	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 1	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 7	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 8	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 6	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 0	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 3	   NPC-3: 10	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 8	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 8	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 0	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 7	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 3	   NPC-3: 9	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 10	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 7	   NPC-3: 2	
+
+LOSE SCORES	  Player: 0	   NPC-1: 6	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 9	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 4	   NPC-3: 10	
+
+WIN SCORES	  Player: 7	   NPC-1: 1	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 0	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 0	   NPC-1: 1	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 1	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 2	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 9	   NPC-3: 4	
+
+LOSE SCORES	  Player: 0	   NPC-1: 1	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 0	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 3	   NPC-3: 8	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 7	   NPC-3: 5	
+
+WIN SCORES	  Player: 8	   NPC-1: 3	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 8	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 3	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 0	   NPC-1: 2	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 0	   NPC-1: 5	   NPC-2: 2	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 4	   NPC-1: 0	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 3	   NPC-3: 7	
+
+WIN SCORES	  Player: 7	   NPC-1: 1	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 6	   NPC-3: 7	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 1	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 2	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 8	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 0	   NPC-1: 6	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 1	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 1	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 0	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 7	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 0	   NPC-2: 8	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 0	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 8	   NPC-1: 7	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 8	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 1	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 6	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 0	   NPC-2: 0	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 7	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 9	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 5	   NPC-3: 8	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 0	   NPC-1: 1	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 8	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 9	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 6	   NPC-3: 8	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 0	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 8	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 8	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 8	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 2	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 1	   NPC-3: 0	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 1	   NPC-3: 0	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 7	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 3	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 3	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 3	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 0	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 8	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 1	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 2	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 1	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 9	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 0	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 7	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 7	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 6	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 6	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 4	   NPC-3: 0	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 8	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 8	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 6	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 0	   NPC-1: 8	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 7	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 4	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 0	   NPC-3: 5	
+
+LOSE SCORES	  Player: 6	   NPC-1: 7	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 7	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 0	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 4	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 7	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 9	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 8	
+
+LOSE SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 7	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 9	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 1	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 9	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 5	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 6	   NPC-3: 7	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 7	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 1	   NPC-3: 1	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 2	   NPC-3: 2	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 1	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 3	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 3	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 5	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 2	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 2	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 6	   NPC-3: 4	
+
+WIN SCORES	  Player: 7	   NPC-1: 0	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 2	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 4	   NPC-3: 0	
+
+WIN SCORES	  Player: 8	   NPC-1: 4	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 2	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 7	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 3	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 2	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 9	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 8	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 8	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 4	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 4	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 1	   NPC-1: 1	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 7	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 5	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 1	   NPC-1: 5	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 3	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 8	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 7	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 6	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 6	   NPC-3: 2	
+
+LOSE SCORES	  Player: 1	   NPC-1: 4	   NPC-2: 2	   NPC-3: 1	
+
+WIN SCORES	  Player: 7	   NPC-1: 3	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 4	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 8	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 3	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 6	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 8	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 8	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 2	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 3	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 6	   NPC-1: 0	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 5	   NPC-1: 0	   NPC-2: 1	   NPC-3: 0	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 7	   NPC-2: 1	   NPC-3: 2	
+
+WIN SCORES	  Player: 8	   NPC-1: 3	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 10	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 3	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 6	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 4	   NPC-2: 5	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 2	
+
+LOSE SCORES	  Player: 1	   NPC-1: 6	   NPC-2: 3	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 3	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 6	   NPC-1: 6	   NPC-2: 2	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 2	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 4	   NPC-3: 4	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 2	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 7	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 7	   NPC-3: 6	
+
+WIN SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 5	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 9	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 1	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 2	   NPC-2: 4	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 5	   NPC-3: 1	
+
+LOSE SCORES	  Player: 3	   NPC-1: 4	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 1	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 1	   NPC-2: 5	   NPC-3: 2	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 7	   NPC-3: 0	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 2	   NPC-1: 2	   NPC-2: 6	   NPC-3: 7	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 5	   NPC-3: 6	
+
+LOSE SCORES	  Player: 0	   NPC-1: 5	   NPC-2: 0	   NPC-3: 0	
+
+WIN SCORES	  Player: 7	   NPC-1: 1	   NPC-2: 4	   NPC-3: 3	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 3	   NPC-3: 2	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 5	
+
+WIN SCORES	  Player: 6	   NPC-1: 5	   NPC-2: 6	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 6	   NPC-2: 3	   NPC-3: 7	
+
+WIN SCORES	  Player: 5	   NPC-1: 3	   NPC-2: 3	   NPC-3: 0	
+
+LOSE SCORES	  Player: 3	   NPC-1: 1	   NPC-2: 2	   NPC-3: 7	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 5	   NPC-3: 2	
+
+WIN SCORES	  Player: 5	   NPC-1: 1	   NPC-2: 2	   NPC-3: 3	
+
+WIN SCORES	  Player: 6	   NPC-1: 4	   NPC-2: 5	   NPC-3: 3	
+
+LOSE SCORES	  Player: 2	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 2	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 3	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 3	   NPC-1: 0	   NPC-2: 5	   NPC-3: 1	
+
+WIN SCORES	  Player: 6	   NPC-1: 0	   NPC-2: 1	   NPC-3: 3	
+
+LOSE SCORES	  Player: 4	   NPC-1: 5	   NPC-2: 5	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 5	
+
+WIN SCORES	  Player: 7	   NPC-1: 5	   NPC-2: 3	   NPC-3: 5	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 1	   NPC-3: 5	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 6	   NPC-3: 8	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 5	   NPC-3: 6	
+
+WIN SCORES	  Player: 8	   NPC-1: 5	   NPC-2: 2	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 6	   NPC-2: 2	   NPC-3: 3	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 6	   NPC-3: 4	
+
+LOSE SCORES	  Player: 4	   NPC-1: 1	   NPC-2: 7	   NPC-3: 3	
+
+WIN SCORES	  Player: 4	   NPC-1: 3	   NPC-2: 4	   NPC-3: 2	
+
+LOSE SCORES	  Player: 5	   NPC-1: 5	   NPC-2: 7	   NPC-3: 4	
+
+LOSE SCORES	  Player: 1	   NPC-1: 3	   NPC-2: 6	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 2	   NPC-1: 3	   NPC-2: 7	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 5	   NPC-2: 4	   NPC-3: 7	
+
+LOSE SCORES	  Player: 0	   NPC-1: 4	   NPC-2: 4	   NPC-3: 4	
+
+LOSE SCORES	  Player: 5	   NPC-1: 4	   NPC-2: 4	   NPC-3: 8	
+
+LOSE SCORES	  Player: 1	   NPC-1: 2	   NPC-2: 4	   NPC-3: 5	
+
+LOSE SCORES	  Player: 3	   NPC-1: 7	   NPC-2: 3	   NPC-3: 1	
+
+LOSE SCORES	  Player: 4	   NPC-1: 6	   NPC-2: 4	   NPC-3: 6	
+
+LOSE SCORES	  Player: 3	   NPC-1: 2	   NPC-2: 6	   NPC-3: 2	
+
+296
