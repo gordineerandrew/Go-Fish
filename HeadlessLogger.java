@@ -48,6 +48,8 @@ public class HeadlessLogger{
 			GoFish.main(args);
 		}
 
+		double localPercentage = wins*100.0/trials;
+		StatsDriver.percentage = Math.round(localPercentage*1.0*trials)/(1.0*trials);
 		out.println(wins);
 
 		out.close();

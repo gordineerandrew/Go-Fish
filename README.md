@@ -148,7 +148,7 @@ Procedure
 
 To compare and contrast the naive strategy to our strategy with educated
 guesses, both needed to be tested in a standard way. The standard test
-we designed was to run the GoFish simulation with 4 players 10000 times
+we designed was to run the GoFish simulation with 4 players 1000 times
 and get the percentage of wins. This was repeated 1000 times and the
 results of these trials were used to generate a reliable mean and
 standard deviation. In turn these measures of central tendency can be
@@ -160,19 +160,19 @@ Data
 
   Naive Strategy          
 ------------------   
-  mean = 28.604      
+  mean = 28.6368      
   
-  std deviation = 0.45955
+  std deviation = 1.49078
 
   
   Educated Strategy
 --------------------
-  mean = 67.0099
+  mean = 67.0766
   
-  std deviation = 0.4698
+  std deviation = 1.4607
 
   ----------------------------------- ------------------------------------
-   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/dumbCurve.png)   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/smartCurve.png)
+   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/dumbCurve.png)   ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/smartCurve.png) ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/CDF_chart_random.png)  ![image](https://github.com/gordineerandrew/Go-Fish/blob/master/images/CDF_chart_educated.png)
   ----------------------------------- ------------------------------------
 
 Results

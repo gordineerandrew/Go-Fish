@@ -196,14 +196,14 @@ This project could be extended in a few interesting ways. A better user interfac
 It can be accepted with common sense that having access to more information would positively affect a player's win rate, but it is an interesting challenge to see exactly how much it can benefit a player.
 
 \subsection{Procedure}
-To compare and contrast the naive strategy to our strategy with educated guesses, both needed to be tested in a standard way. The standard test we designed was to run the GoFish simulation with 4 players 10000 times and get the percentage of wins. This was repeated 1000 times and the results of these trials were used to generate a reliable mean and standard deviation. In turn these measures of central tendency can be used to form a normal curve to evaluate each strategy in comparison to each other.
+To compare and contrast the naive strategy to our strategy with educated guesses, both needed to be tested in a standard way. The standard test we designed was to run the GoFish simulation with 4 players 1000 times and get the percentage of wins. This was repeated 1000 times and the results of these trials were used to generate a reliable mean and standard deviation. In turn these measures of central tendency can be used to form a normal curve and cumulative distribution function to evaluate each strategy in comparison to each other.
 
 \subsection{Data}
 \begin{center}
 	\begin{tabular}{l | l}
 		Naive Strategy & Educated Strategy \\ \hline
-		\textbf{$\mu$} = 28.604 & \textbf{$\mu$} = 67.0099  \\
-		\textbf{$\sigma$} = 0.45955 & \textbf{$\sigma$} = 0.4698 \\ 
+		\textbf{$\mu$} = 28.6368 & \textbf{$\mu$} = 67.0766  \\
+		\textbf{$\sigma$} = 1.49078 & \textbf{$\sigma$} = 1.4607 \\ 
 	\end{tabular}
 
 	\vspace{4 mm}
@@ -217,6 +217,12 @@ To compare and contrast the naive strategy to our strategy with educated guesses
 	\begin{tabular}{c c}
 		\includegraphics[scale=0.37]{../images/dumbCurve.png} & \includegraphics[scale=0.37]{../images/smartCurve.png} \\
 	\end{tabular}
+
+	\begin{tabular}{c}
+		\includegraphics[scale=1]{../images/CDF_chart_random.png} \\ \includegraphics[scale=1]{../images/CDF_chart_educated.png} \\
+	\end{tabular}
+
+
 
 \end{center}
 
